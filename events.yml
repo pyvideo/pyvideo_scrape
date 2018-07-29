@@ -1,0 +1,63 @@
+repo_dir: ~/git/pyvideo_data
+
+events:
+
+- title: PyCon Israel 2018
+  dir: pycon-israel-2018
+  youtube_list:
+  - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFw-jiYORKjzwyPR337TtX9X
+  - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFyf20n-6rceqPVyVd6z5O5X
+  - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFwWy00AG8GeVJj61I_Epg7u
+
+  # ~ - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFzfirPyzua7XZh9a6FMGkjX
+  # ~ - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFyS6q6bZBWlhOrVDSsLg0br
+  # ~ - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFzCzvBKSwF3nNhnI3XZQz3u
+  related_urls:
+  - label: Conference schedule
+    url: https://il.pycon.org/2018/schedule/
+  language: eng
+  dates:
+    begin: 2018-06-04
+    end: 2018-06-05
+    default: 2018-06-04
+  issue: 508
+
+
+# ISO_639-3 language codes https://en.wikipedia.org/wiki/ISO_639-3
+
+# languages = {
+#     'ita': 'Italian',
+#     'zho': 'Chinese',
+#     'por': 'Portuguese',
+#     'ukr': 'Ukrainian',
+#     'deu': 'German',
+#     'eng': 'English',
+#     'rus': 'Russian',
+#     'fra': 'French',
+#     'spa': 'Spanish',
+#     'eus': 'Basque',
+#     'cat': 'Catalan',
+#     'glg': 'Galician',
+#     'kor': 'Korean',
+#     'lit': 'Lithuanian',
+#     'jpn': 'Japanese',
+#     'ces': 'Czech',
+#     'pol': 'Polish',
+# }
+
+
+done_events:
+
+- title: PyData Amsterdam 2018
+  dir: pydata-amsterdam-2018
+  youtube_list: https://www.youtube.com/playlist?list=PLGVZCDnMOq0rAn6c8OIbPdw1xebhhyoHN
+  language: eng
+  related_urls:
+  - label: Conference schedule
+    url: https://pydata.org/amsterdam2018/schedule/
+  dates:
+    begin: 2018-05-25
+    end: 2018-05-27
+    default: 2018-05-26
+  issue: 507
+
