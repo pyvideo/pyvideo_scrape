@@ -4,8 +4,11 @@ name = "pypi"
 verify_ssl = true
 
 [dev-packages]
+yapf = "*"
 
 [packages]
+colorlog = "*"
+pyaml = "*"
 
 [requires]
 python_version = "3.5"
