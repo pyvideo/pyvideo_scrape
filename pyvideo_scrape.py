@@ -74,6 +74,26 @@ class Event:
         else:
             self.know_date = False
 
+    def create_branch(self):
+        """Create a new branch in pyvideo repository to add a new event"""
+        pass
+
+    def create_dirs(self):
+        """Create new directories and conference file in pyvideo repository to add a new event"""
+        pass
+
+    def download_video_data(self):
+        """Download youtube metadata conrresponding to this event youtube lists"""
+        pass
+
+
+class Video:
+    """PyVideo Video metadata"""
+
+    def __init__(self, video_data: dict, video_dir):
+        pass
+
+
 def main():
     """Scrape several conferences into pyvideo repository"""
 
@@ -88,12 +108,16 @@ def main():
 
     pyvideo_repo = pathlib.PosixPath(events_data['repo_dir']).expanduser().resolve()
     events = [Event(event_data, repo_dir=pyvideo_repo) for event_data in events_data['events']]
+    for event in events:
+        event.create_branch()
+        event.create_dirs()
+        event.download_video_data()
+
     time_end = datetime.datetime.now()
     time_delta = str(time_end - time_init)
     LOGGER.debug('Time init: %s', time_init)
     LOGGER.debug('Time end: %s', time_end)
     LOGGER.debug('Time delta: %s', time_delta)
-
 
 
 if __name__ == '__main__':
