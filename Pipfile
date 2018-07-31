@@ -10,6 +10,9 @@ ipdb = "*"
 [packages]
 colorlog = "*"
 pyaml = "*"
+sh = "*"
+youtube-dl = "*"
+python-slugify = "*"
 
 [requires]
 python_version = "3.5"

@@ -5,9 +5,10 @@ events:
 - title: PyCon Israel 2018
   dir: pycon-israel-2018
   youtube_list:
-  - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFw-jiYORKjzwyPR337TtX9X
-  - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFyf20n-6rceqPVyVd6z5O5X
-  - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFwWy00AG8GeVJj61I_Epg7u
+  - https://www.youtube.com/watch?v=AcZJUQ3y2ek
+#  - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFw-jiYORKjzwyPR337TtX9X
+#  - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFyf20n-6rceqPVyVd6z5O5X
+#  - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFwWy00AG8GeVJj61I_Epg7u
 
   # ~ - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFzfirPyzua7XZh9a6FMGkjX
   # ~ - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFyS6q6bZBWlhOrVDSsLg0br
@@ -21,6 +22,10 @@ events:
     end: 2018-06-05
     default: 2018-06-04
   issue: 508
+  minimal_download: false
+#  tags:
+#    - test
+#    - more test
 
 
 # ISO_639-3 language codes https://en.wikipedia.org/wiki/ISO_639-3
