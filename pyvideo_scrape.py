@@ -236,14 +236,18 @@ class Video:
         if not self.language:
             self.language = event.language
         self.related_urls = copy.deepcopy(event.related_urls)
-        self.related_urls.extend(list(set(re.findall(r'http[s]?://[^ \\\n\t()[\]]+', self.description))))
+
 
         if event.minimal_download:
             self.speakers = []
+            self.tags = event.tags
+            self.description = ''
         else:
             self.tags = sorted(set(video_data['tags']).union(set(event.tags)))
-            # TODO: youtube_redirections
             self.description = video_data['description']
+            description_urls = list(set(re.findall(r'http[s]?://[^ \\\n\t()[\]"`´\']+', video_data['description'])))
+            for url in description_urls:
+                self.related_urls.append({'label': url, 'url': url})
 
     def save(self):
         """"Save to disk"""
