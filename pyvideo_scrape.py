@@ -205,7 +205,6 @@ class Video:
     def __calculate_slug(self):
         """Calculate slug from title"""
 
-        # TODO: deduplicate slug
         return slugify.slugify(self.title)
 
     def __calculate_date_recorded(self, upload_date_str):
@@ -248,7 +247,13 @@ class Video:
 
     def save(self):
         """"Save to disk"""
-        path = self.event.video_dir / self.filename
+        path = self.event.video_dir / '{}.json'.format(self.filename)
+        if path.exists():
+            duplicate_num = 1
+            new_path = path
+            while new_path.exists():
+                duplicate_num += 1
+                new_path = pathlib.PosixPath(path.stem + '-{}{}'.format(duplicate_num, path.suffix))
 
         data = {
             'title': self.title,
@@ -260,7 +265,7 @@ class Video:
             'duration': self.duration,
             'language': self.language,
             'related_urls': self.related_urls,
-            }
+        }
         if 'tags' in self.__dict__:
             data['tags'] = self.tags
         if 'description' in self.__dict__:
