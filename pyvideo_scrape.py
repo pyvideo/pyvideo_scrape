@@ -98,6 +98,8 @@ class Event:
         self.related_urls = event_data.get('related_urls', [])
         self.language = event_data.get('language', None)
         self.tags = event_data.get('tags', [])
+        if not self.tags:
+            self.tags = []
 
         if 'dates' in event_data and event_data['dates']:
             self.know_date = True
