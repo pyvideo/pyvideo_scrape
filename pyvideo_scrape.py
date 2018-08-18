@@ -169,6 +169,23 @@ class Event:
         for video in self.videos:
             video.save()
 
+    def create_commit(self):
+        """Create a new commit in pyvideo repository with the new event data"""
+        os.chdir(str(self.repository_path))
+        sh.git.checkout(self.branch)
+        sh.git.add(self.event_dir)
+        if self.minimal_download:
+            message = 'Scraped {}\n\nminimal download executed for #{}'.format(self.branch, self.issue)
+            sh.git.commit('-m', message)
+            sh.git.push('--set-upstream', 'origin', self.branch)
+            # ~ sh.git.push('--set-upstream', '--force', 'origin', self.branch)
+            sh.git.checkout('master')
+        else:
+            message = 'Scraped {}\n\nFixes #{}'.format(self.branch, self.issue)
+            sh.git.commit('-m', message)
+            sh.git.checkout('master')
+        LOGGER.debug('Conference %s commited', self.branch)
+
 
 class Video:
     """PyVideo Video metadata"""
@@ -282,6 +299,7 @@ def main():
             continue
         event.download_video_data()
         event.save_video_data()
+        event.create_commit()
 
     time_end = datetime.datetime.now()
     time_delta = str(time_end - time_init)
