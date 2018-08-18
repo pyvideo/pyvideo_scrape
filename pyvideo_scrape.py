@@ -159,7 +159,10 @@ class Event:
 
         youtube_list = sum((scrape_url(url) for url in self.youtube_lists), [])
         for youtube_video_data in youtube_list:
-            self.videos.append(Video(video_data=youtube_video_data, event=self))
+            if youtube_video_data:  # Valid video
+                self.videos.append(Video(video_data=youtube_video_data, event=self))
+            else:
+                LOGGER.warning('Null youtube video')
 
     def save_video_data(self):
         """Save all event videos in PyVideo format"""
