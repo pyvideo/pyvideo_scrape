@@ -95,7 +95,7 @@ class Event:
         else:
             raise TypeError("youtube_list must be a string or a list of strings")
 
-        self.related_urls = event_data.get('related_urls', {})
+        self.related_urls = event_data.get('related_urls', [])
         self.language = event_data.get('language', None)
         self.tags = event_data.get('tags', [])
 
