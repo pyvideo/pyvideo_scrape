@@ -109,6 +109,8 @@ class Event:
         else:
             self.know_date = False
         self.minimal_download = event_data.get('minimal_download', False)
+        if self.minimal_download:
+            self.branch = "{}--minimal-download".format(self.branch)
 
     def create_branch(self):
         """Create a new branch in pyvideo repository to add a new event"""
