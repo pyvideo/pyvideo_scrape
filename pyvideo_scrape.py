@@ -212,7 +212,7 @@ class Video:
 
         upload_date = datetime.date(int(upload_date_str[0:4]), int(upload_date_str[4:6]), int(upload_date_str[6:8]))
         if self.event.know_date:
-            if not(self.event.date_begin <= upload_date <= self.event.date_end):
+            if not (self.event.date_begin <= upload_date <= self.event.date_end):
                 return self.event.date_default.isoformat()
 
         return upload_date.isoformat()
