@@ -250,7 +250,6 @@ class Video:
         """"Save to disk"""
         path = self.event.video_dir / self.filename
 
-        category_file_path = self.event.event_dir / 'category.json'
         data = {
             'title': self.title,
             'speakers': self.speakers,
@@ -269,7 +268,7 @@ class Video:
 
         data_text = json.dumps(data, **JSON_FORMAT_KWARGS) + '\n'
         save_file(path, data_text)
-        LOGGER.debug('File %s created', category_file_path)
+        LOGGER.debug('File %s created', path)
 
 
 def main():
@@ -293,6 +292,7 @@ def main():
         try:
             event.create_branch()
             event.create_dirs()
+            event.create_category()
         except (sh.ErrorReturnCode_128, FileExistsError) as exc:
             LOGGER.warning('Event %s skipped', event.branch)
             LOGGER.debug(exc.args[0])
