@@ -1,0 +1,799 @@
+# Historical of events scraped with "minimal_download: true"
+# pyvideo_scarpe.py don't read this file
+
+minimal_download:
+
+
+# == [ 2012 ] =================================================================
+
+- title: PyCon Ar 2012
+  dir: pycon-ar-2012
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLkuS0waF8kril9T9qQUAW6NCptNLZXmHc
+    - https://www.youtube.com/playlist?list=PLkuS0waF8krjwcRHzSJMq_nA67mCFi24T
+    - https://www.youtube.com/playlist?list=PLkuS0waF8krgk1ULTg6sGrEBMs46AfoMt
+  related_urls:
+  - label: "PyCon Argentina 2012 Brouchure"
+    url: https://es.scribd.com/document/116769116/PyCon-Argentina-2012-Brouchure
+  language: eng
+  dates:
+    begin: 2012-11-12
+    end: 2012-11-17
+    default: 2012-11-12
+  issue: 35
+  minimal_download: true
+  tags:
+
+- title: PyCon India 2012
+  dir: pycon-india-2012
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PL6GW05BfqWIdWaV_aP6kHJKFY0ybOOfoA
+  related_urls:
+  - label: Conference schedule
+    url: https://in.pycon.org/2012/index.html#schedule
+  language: eng
+  dates:
+    begin: 2012-09-28
+    end: 2012-09-30
+    default: 2012-09-28
+  issue: 516
+  minimal_download: true
+  tags:
+
+- title: PyCon Japan 2012
+  dir: pycon-jp-2012
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLMkWB0UjwFGnG0fLNi1kyNqFI19s3kCeH
+  related_urls:
+  - label: Conference schedule
+    url: https://2012.pycon.jp/en/program/index.html
+  language: eng
+  dates:
+    begin: 2012-09-15
+    end: 2012-09-16
+    default: 2012-09-15
+  issue: 41
+  minimal_download: true
+  tags:
+
+# == [ 2013 ] =================================================================
+
+- title: PyCon India 2013
+  dir: pycon-india-2013
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PL6GW05BfqWIdsaaV35jcHWPWTI-DAw6Yn
+  related_urls:
+  - label: Conference schedule
+    url: https://in.pycon.org/2013/index.html#schedule
+  language: eng
+  dates:
+    begin: 2013-08-30
+    end: 2013-09-01
+    default: 2013-08-30
+  issue: 529
+  minimal_download: true
+  tags:
+
+# == [ 2014 ] =================================================================
+
+- title: PyCon India 2014
+  dir: pycon-india-2014
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PL6GW05BfqWIfX0-YkKI7Ge5f9IKjOxirf
+  related_urls:
+  - label: Conference schedule
+    url: https://in.pycon.org/2014/index.html#schedule
+  language: eng
+  dates:
+    begin: 2014-09-27
+    end: 2014-09-28
+    default: 2014-09-27
+  issue: 534
+  minimal_download: true
+  tags:
+
+- title: PyCon Japan 2014
+  dir: pycon-jp-2014
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLMkWB0UjwFGm4Ao5w2CKv24tl_Op_kxs5
+  related_urls:
+  - label: Conference schedule
+    url: https://pycon.jp/2014/schedule/
+  language: jpn
+  dates:
+    begin: 2014-09-12
+    end: 2014-09-15
+    default: 2014-09-12
+  issue: 43
+  minimal_download: true
+  tags:
+
+- title: PyData New York City 2014
+  dir: pydata-new-york-city-2014
+  youtube_list:
+    # downloaded https://www.youtube.com/user/PyDataTV/videos and grep PyData NYC 2014
+    # grep -i "PyData NYC 2014" * -l | xargs -d '\n' grep -h 'watch?' |  tr -d '"' | sed -e 's/url:/-/'
+      - https://www.youtube.com/watch?v=jPSP9aMs_3U
+      - https://www.youtube.com/watch?v=ryYuZziQ50c
+      - https://www.youtube.com/watch?v=3cFx9HKxCqk
+      - https://www.youtube.com/watch?v=ZL77pbWBZQA
+      - https://www.youtube.com/watch?v=E70AO8r5sMs
+      - https://www.youtube.com/watch?v=XNVgQ55wWxs
+      - https://www.youtube.com/watch?v=R5CoqldQMz4
+      - https://www.youtube.com/watch?v=WhoFbu9dBe0
+      - https://www.youtube.com/watch?v=VEo2shBuOrc
+      - https://www.youtube.com/watch?v=BoXW0kLCwsQ
+      - https://www.youtube.com/watch?v=1uVWjdAbgBg
+      - https://www.youtube.com/watch?v=k5uNhUomHU8
+      - https://www.youtube.com/watch?v=Lp_UdtQMsx4
+      - https://www.youtube.com/watch?v=XSXcz7rEzY4
+      - https://www.youtube.com/watch?v=jJO1s2Z-oAQ
+      - https://www.youtube.com/watch?v=jtkSaHC6Hy0
+      - https://www.youtube.com/watch?v=8T-sQztK6uc
+      - https://www.youtube.com/watch?v=PUsntnCp65c
+      - https://www.youtube.com/watch?v=ryZL4XNUmwo
+      - https://www.youtube.com/watch?v=9POxdONvzhs
+      - https://www.youtube.com/watch?v=nZ0L8DOo3V4
+      - https://www.youtube.com/watch?v=D3gZUyyYm78
+      - https://www.youtube.com/watch?v=MBH2qrwRhEE
+      - https://www.youtube.com/watch?v=heGtUhFm1-A
+      - https://www.youtube.com/watch?v=ntdjDlLH2B4
+      - https://www.youtube.com/watch?v=G4RmVni8nxc
+      - https://www.youtube.com/watch?v=Tcb2-sOU76M
+      - https://www.youtube.com/watch?v=wUhMmR1JgAw
+      - https://www.youtube.com/watch?v=6fFZgc2q9nw
+      - https://www.youtube.com/watch?v=mx0j7uBdD8k
+      - https://www.youtube.com/watch?v=4QpwcjD2Lpw
+      - https://www.youtube.com/watch?v=IQksDvFl2_8
+      - https://www.youtube.com/watch?v=s9waj52SdgE
+      - https://www.youtube.com/watch?v=uvP6aHOYY9c
+      - https://www.youtube.com/watch?v=_NVd8oxhzgA
+      - https://www.youtube.com/watch?v=PsjANO10KgM
+      - https://www.youtube.com/watch?v=-FDTK80zsXc
+      - https://www.youtube.com/watch?v=ylhwYXBlHHw
+      - https://www.youtube.com/watch?v=lwQNwbZX8V4
+      - https://www.youtube.com/watch?v=FjeIHfRHeY4
+      - https://www.youtube.com/watch?v=fHUZWgNm3vs
+      - https://www.youtube.com/watch?v=b6N7X_bN_Zk
+      - https://www.youtube.com/watch?v=ksaMXd3knZg
+  related_urls:
+  - label: Conference schedule
+    url: https://pydata.org/nyc2014/schedule/
+  language: eng
+  dates:
+    begin: 2014-11-22
+    end: 2014-11-23
+    default: 2014-11-22
+  issue: 405
+  minimal_download: true
+  tags:
+
+- title: PyData Silicon Valley 2014
+  dir: pydata-sv-2014
+  youtube_list:
+    # downloaded https://www.youtube.com/user/PyDataTV/videos and grep PyData SV 2014
+    # grep -i "PyData SV 2014" * -l | xargs -d '\n' grep -h 'watch?' |  tr -d '"' | sed -e 's/url:/-/'
+      - https://www.youtube.com/watch?v=9R9n7zpkauQ
+      - https://www.youtube.com/watch?v=od8U-XijzlQ
+      - https://www.youtube.com/watch?v=WD7b1jLeZZ4
+      - https://www.youtube.com/watch?v=VaV10VNZCLA
+      - https://www.youtube.com/watch?v=vE_CJTen15M
+      - https://www.youtube.com/watch?v=o7Tb7YhJZR0
+      - https://www.youtube.com/watch?v=t4zEeujVht8
+      - https://www.youtube.com/watch?v=vO1lTVVS2xo
+      - https://www.youtube.com/watch?v=gpMT17644mM
+      - https://www.youtube.com/watch?v=poQKuXgNd88
+      - https://www.youtube.com/watch?v=DrCKkQeU4kg
+      - https://www.youtube.com/watch?v=6RrDBKUlO4Q
+      - https://www.youtube.com/watch?v=Ayd4sqPH2DE
+      - https://www.youtube.com/watch?v=p7oFxz_NykQ
+      - https://www.youtube.com/watch?v=pHrwqLhAaMw
+      - https://www.youtube.com/watch?v=vyvxiljc5vA
+      - https://www.youtube.com/watch?v=ucwLrTb4iFY
+      - https://www.youtube.com/watch?v=RdhoN4VVqq8
+      - https://www.youtube.com/watch?v=wPBXDgMRF9M
+      - https://www.youtube.com/watch?v=cZEOdm83I78
+      - https://www.youtube.com/watch?v=qiydAZdB-o0
+      - https://www.youtube.com/watch?v=UP94gMK7fEc
+      - https://www.youtube.com/watch?v=PpBK4zIaFLE
+      - https://www.youtube.com/watch?v=KKoVeiQOmik
+      - https://www.youtube.com/watch?v=M0VCbhfQ3HQ
+      - https://www.youtube.com/watch?v=6JL-H2_xDLo
+      - https://www.youtube.com/watch?v=QPimD4gL0ak
+      - https://www.youtube.com/watch?v=5R3oFD07LWI
+      - https://www.youtube.com/watch?v=e3-DjsKhFug
+      - https://www.youtube.com/watch?v=1-Ni-pzTW2c
+      - https://www.youtube.com/watch?v=kmy-sfm3cC8
+      - https://www.youtube.com/watch?v=nVBD0jUp0uE
+      - https://www.youtube.com/watch?v=y3ZTKFZ-1QQ
+      - https://www.youtube.com/watch?v=-J9ZICyev5E
+      - https://www.youtube.com/watch?v=l-ZyeCKQu1I
+      - https://www.youtube.com/watch?v=T5CZyNwBa9c
+      - https://www.youtube.com/watch?v=29A-ifomodc
+      - https://www.youtube.com/watch?v=FgfKA-HJFI0
+      - https://www.youtube.com/watch?v=xnfnv6WT1Ng
+      - https://www.youtube.com/watch?v=wPEmoT018s8
+  related_urls:
+  - label: Conference schedule
+    url: https://pydata.org/sv2014/schedule/
+  language: eng
+  dates:
+    begin: 2014-05-02
+    end: 2014-05-04
+    default: 2014-05-02
+  issue: 406
+  minimal_download: true
+  tags:
+
+# == [ 2015 ] =================================================================
+
+- title: PyAstro 2015
+  dir: pyastro-2015
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PL7P5HEbvYRSYciQ91uP2BRF3B-VXdc2dG
+  related_urls:
+  - label: Workshop proceedings
+    url: https://python-in-astronomy.github.io/2015/
+  language: eng
+  dates:
+    begin: 2015-04-20
+    end: 2015-04-20
+    default: 2015-04-24
+  issue: 512
+  minimal_download: true
+  tags:
+
+- title: PyData Berlin 2015
+  dir: pydata-berlin-2015
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLGVZCDnMOq0pmTLkkMe4DIqLIOCMr9TMy
+  related_urls:
+  - label: Conference schedule
+    url: https://pydata.org/berlin2015/schedule.html
+  language: eng
+  dates:
+    begin: 2015-05-29
+    end: 2015-05-30
+    default: 2015-05-29
+  issue: 403
+  minimal_download: true
+  tags:
+
+- title: PyData Dallas 2015
+  dir: pydata-dallas-2015
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLGVZCDnMOq0pX83sNsFy7X3xEjcsK9gXM
+  related_urls:
+  - label: Conference schedule
+    url: https://pydata.org/dal2015/schedule/
+  language: eng
+  dates:
+    begin: 2015-04-24
+    end: 2015-04-26
+    default: 2015-04-24
+  issue: 404
+  minimal_download: true
+  tags:
+
+- title: PyCon Japan 2015
+  dir: pycon-jp-2015
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLMkWB0UjwFGkE3BIm4qpwaK5oPrmLLJoT
+  related_urls:
+  - label: Conference schedule
+    url: https://pycon.jp/2015/schedule/
+  language: jpn
+  dates:
+    begin: 2015-10-09
+    end: 2015-10-12
+    default: 2015-10-10
+  issue: 44
+  minimal_download: true
+  tags:
+
+- title: PyData New York City 2015
+  dir: pydata-new-york-city-2015
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLGVZCDnMOq0ourWlul1F7aYE30VQPaMRL
+  related_urls:
+  - label: Conference schedule
+    url: https://pydata.org/nyc2015/schedule/
+  language: eng
+  dates:
+    begin: 2015-11-09
+    end: 2015-11-11
+    default: 2015-11-09
+  issue: 402
+  minimal_download: true
+  tags:
+
+
+# == [ 2016 ] =================================================================
+
+- title: PyAstro 2016
+  dir: pyastro-2016
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PL7P5HEbvYRSYdEp8i28NoVd7GeKvrBHXm
+  related_urls:
+  - label: Workshop proceedings
+    url: https://python-in-astronomy.github.io/2016/
+  language: eng
+  dates:
+    begin: 2016-03-21
+    end: 2016-03-25
+    default: 2016-03-21
+  issue: 511
+  minimal_download: true
+  tags:
+
+- title: PyCon Singapore 2016
+  dir: pycon-sg-2016
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLECEw2eFfW7iTsIrldRO2b6NLEuRQYD2L
+  related_urls:
+  - label: Conference schedule
+    url: https://pycon.sg/archive/2016/schedule/index.html
+  language: eng
+  dates:
+    begin: 2016-06-23
+    end: 2016-06-23
+    default: 2016-06-23
+  issue: 29
+  minimal_download: true
+  tags:
+
+# == [ 2017 ] =================================================================
+
+- title: PyCon CA 2017
+  dir: pycon-ca-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLFE1rxhwe5KYWc2m9948bonoKCdOwYw3L
+  related_urls:
+  - label: Conference schedule
+    url: https://2017.pycon.ca/schedule
+  language: eng
+  dates:
+    begin: 2017-11-18
+    end: 2017-11-21
+    default: 2017-11-18
+  issue: 484
+  minimal_download: true
+  tags:
+
+- title: PyCon Ukraine 2017
+  dir: pycon-ukraine-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLq8sY4Lwwt28IjX2wfRgVbZYt8q57W9zO
+  related_urls:
+  - label: Conference schedule
+    url: https://web.archive.org/web/20170705070602/https://ua.pycon.org/en/schedule.html
+  language: rus
+  dates:
+    begin: 2017-04-08
+    end: 2017-04-09
+    default: 2017-04-08
+  issue: 222
+  minimal_download: true
+  tags:
+
+- title: PyCon Japan 2017
+  dir: pycon-jp-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLMkWB0UjwFGmZacud6MiX_mcoiIFSwbmO
+  related_urls:
+  - label: Conference schedule
+    url: https://pycon.jp/2017/ja/schedule/
+  language: jpn
+  dates:
+    begin: 2017-09-07
+    end: 2017-09-08
+    default: 2017-09-10
+  issue: 371
+  minimal_download: true
+  tags:
+
+- title: PyCon Korea 2017
+  dir: pycon-kr-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLZPhyNeJvHRmvCnWMBZJiFXu9kDUcn5FG
+  related_urls:
+  - label: Conference schedule
+    url: https://www.pycon.kr/2017/program/schedule/
+  language: kor
+  dates:
+    begin: 2017-08-12
+    end: 2017-08-15
+    default: 2017-08-12
+  issue: 378
+  minimal_download: true
+  tags:
+
+- title: PyCon Kenya 2017
+  dir: pycon-ke-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLGMI6pYdNJXcaKJ_ai89bmiqfU_aRh9yI
+  related_urls:
+  - label: Conference schedule
+    url: https://web.archive.org/web/20180818151308/https://i2.wp.com/blog.leicunnstudio.com/wp-content/uploads/2017/11/pyconkeprog.png?ssl=1
+  language: eng
+  dates:
+    begin: 2017-09-28
+    end: 2017-09-28
+    default: 2017-09-29
+  issue: 380
+  minimal_download: true
+  tags:
+
+- title: PyCon Nigeria 2017
+  dir: pycon-ng-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLE2LJQvu0iDx0ZkTYPB3TQVIRUcYlcVQY
+  related_urls:
+  - label: PyCon Nigeria web
+    url: https://www.pycon.ng/
+  language: eng
+  dates:
+    begin: 2107-09-15
+    end: 2107-09-17
+    default: 2107-09-15
+  issue: 546
+  minimal_download: true
+  tags:
+
+- title: Write the Docs Prague 2017
+  dir: writethedocs-eu-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLZAeFn6dfHplBYPCwJt6ItkMDt7JSgUiL
+  related_urls:
+  - label: Conference schedule
+    url: http://www.writethedocs.org/conf/eu/2017/schedule/
+  language: eng
+  dates:
+    begin: 2017-09-09
+    end: 2017-09-09
+    default: 2017-09-11
+  issue: 413
+  minimal_download: true
+  tags:
+
+- title: Write the Docs Portland 2017
+  dir: writethedocs-na-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLZAeFn6dfHpkBld-70TsOoYToM3CaTxRC
+  related_urls:
+  - label: Conference schedule
+    url: http://www.writethedocs.org/conf/na/2017/
+  language: eng
+  dates:
+    begin: 2017-05-13
+    end: 2017-05-16
+    default: 2017-05-15
+  issue: 414
+  minimal_download: true
+  tags:
+
+- title: Python Brasil 2017
+  dir: pythonbrasil-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLDC3uVLxaEQ0SdTRwwZm7jCTXgAOXcgfn
+  related_urls:
+  - label: Conference schedule
+    url: http://2017.pythonbrasil.org.br/#schedule
+  language: por
+  dates:
+    begin: 2017-10-06
+    end: 2017-10-11
+    default: 2017-10-06
+  issue: 446
+  minimal_download: true
+  tags:
+
+- title: JupyterCon 2017
+  dir: jupytercon-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PL055Epbe6d5aP6Ru42r7hk68GTSaclYgi
+  related_urls:
+  - label: Conference schedule
+    url: https://conferences.oreilly.com/jupyter/jup-ny-2017/public/schedule/grid/public/2017-08-24
+  language: eng
+  dates:
+    begin: 2017-08-22
+    end: 2017-08-25
+    default: 2017-08-24
+  issue: 467
+  minimal_download: true
+  tags:
+
+- title: PyCaribbean 2017
+  dir: pycaribbean-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLW4Oc02uR1b2o7FG8xjCSTb70Y4sLUJdK
+  related_urls:
+  - label: Conference schedule
+    url: https://web.archive.org/web/20170504140840/http://pycaribbean.com:80/schedule
+  language: eng
+  dates:
+    begin: 2017-02-18
+    end: 2017-02-19
+    default: 2017-02-18
+  issue: 477
+  minimal_download: true
+  tags:
+
+- title: PyCon Taiwan 2017
+  dir: pycon-tw-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLqtzN042Qpffip6u4_WUTRXxFZDgdgrPV
+  related_urls:
+  - label: Conference schedule
+    url: https://tw.pycon.org/2017/en-us/events/schedule/
+  dates:
+    begin: 2017-06-09
+    end: 2017-06-11
+    default: 2017-06-09
+  issue: 411
+  minimal_download: true
+  tags:
+
+# == [ 2018 ] =================================================================
+
+- title: PyData Berlin 2018
+  dir: pydata-berlin-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLGVZCDnMOq0oQh7daBKy1AW5Q34d0LDsC
+  related_urls:
+  - label: Conference schedule
+    url: https://pydata.org/berlin2018/schedule/
+  language: eng
+  dates:
+    begin: 2018-07-06
+    end: 2018-07-08
+    default: 2018-07-06
+  issue: 531
+  minimal_download: true
+  tags:
+
+- title: PyData London 2018
+  dir: pydata-london-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLGVZCDnMOq0ovNxfxOqYcBcQOIny9Zvb-
+  related_urls:
+  - label: Conference schedule
+    url: https://pydata.org/london2018/schedule/
+  language: eng
+  dates:
+    begin: 2018-04-27
+    end: 2018-04-29
+    default: 2018-04-27
+  issue: 506
+  minimal_download: true
+  tags:
+
+- title: EuroPython 2018
+  dir: europython-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PL8uoeex94UhG24HeepNtb8G4evYvJNR38
+  related_urls:
+  - label: Conference schedule
+    url: https://ep2018.europython.eu/p3/schedule/ep2018/
+  language: eng
+  dates:
+    begin: 2018-07-23
+    end: 2018-07-29
+    default: 2018-07-25
+  issue: 527
+  minimal_download: true
+  tags:
+
+- title: PyOhio 2018
+  dir: pyohio-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PL2k6bbM_wgjvY02EFUMhwHRyaSaEokT2B
+  related_urls:
+  - label: Conference schedule
+    url: https://www.pyohio.org/2018/schedule/
+    # https://www.pyohio.org/2018/schedule/conference.json
+  language: eng
+  dates:
+    begin: 2018-07-28
+    end: 2018-07-29
+    default: 2018-07-28
+  issue: 522
+  minimal_download: true
+  tags:
+
+- title: SciPy 2018
+  dir: scipy-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLYx7XA2nY5Gd-tNhm79CNMe_qvi35PgUR
+  related_urls:
+  - label: Conference schedule
+    url: https://scipy2018.scipy.org/ehome/299527/721463/
+  - label: Conference slides
+    url: https://github.com/deniederhut/Slides-SciPyConf-2018
+  language: eng
+  dates:
+    begin: 2018-07-11
+    end: 2018-07-15
+    default: 2018-07-09
+  issue: 524
+  minimal_download: true
+  tags:
+
+- title: PyCon Ukraine 2018
+  dir: pycon-ukraine-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLq8sY4Lwwt2_8pcWVl6hC80_wwGZt_2zS
+  related_urls:
+  - label: Conference schedule
+    url: https://2018.uapycon.org/#schedule
+  language: rus
+  dates:
+    begin: 2018-04-28
+    end: 2018-04-29
+    default: 2018-04-28
+  issue: 559
+  minimal_download: true
+  tags:
+
+- title: PyData Delhi 2018
+  dir: pydata-delhi-2018
+  youtube_list:
+    - https://www.youtube.com/watch?v=mCQYXHJKZW8
+    - https://www.youtube.com/watch?v=bTVOF64_Uq0
+    - https://www.youtube.com/watch?v=jtxc4bifzAo
+    - https://www.youtube.com/watch?v=HauxN2ZEIeE
+  related_urls:
+  - label: Conference schedule
+    url: https://docs.google.com/spreadsheets/d/e/2PACX-1vT7wSZ4z4Vr__D06TflKPlyk49CFfFcJ-WfP-XARavtoB3xLPEQjIuk48pvwpShyT7DpBmPiC5GieCS/pubhtml?gid=0&single=true
+  language: eng
+  dates:
+    begin: 2018-08-11
+    end: 2018-08-12
+    default: 2018-08-11
+  issue: 563
+  minimal_download: true
+  tags:
+
+- title: PyCon Russia 2018
+  dir: pycon-ru-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLRdS-n5seLRp2es9T9CHzS1W1-apIezYB
+  related_urls:
+  - label: Conference content
+    url: http://pycon.ru/2018/en/program/content/
+  language: rus
+  dates:
+    begin: 2018-06-22
+    end: 2018-06-23
+    default: 2018-06-22
+  issue: 562
+  minimal_download: true
+  tags:
+
+- title: PyCon APAC 2018
+  dir: pycon-apac-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLMrPHnpQRHYY23mWiF7415gvVOXi1G83d
+  related_urls:
+  - label: Conference schedule
+    url: https://pycon.sg/schedule/
+  language: eng
+  dates:
+    begin: 2018-05-31
+    end: 2018-06-02
+    default: 2018-06-01
+  issue: 510
+  minimal_download: true
+  tags:
+
+- title: PyCon Italia 2018
+  # ~ dir: pycon-italia-full
+  # grep '"recorded": "2018-' * -l | xargs -d '\n' grep -h 'watch?' |  tr -d '"' | sed -e 's/url:/-/'
+  dir: pycon-italia-2018
+  youtube_list:
+      # ~ - https://www.youtube.com/user/pyconitalia/videos
+      - https://www.youtube.com/watch?v=-UzMJiNLpG8
+      - https://www.youtube.com/watch?v=RhtXHI5KRzw
+      - https://www.youtube.com/watch?v=bO2lrE3gzFo
+      - https://www.youtube.com/watch?v=ja09MfzBGZ0
+      - https://www.youtube.com/watch?v=EEdRP9PUmPg
+      - https://www.youtube.com/watch?v=yGYDH1t8d4k
+      - https://www.youtube.com/watch?v=JnVUhQi90-w
+      - https://www.youtube.com/watch?v=kMQIP83e0l0
+      - https://www.youtube.com/watch?v=MhNcE7jXrcY
+      - https://www.youtube.com/watch?v=gd-nxA_qb8I
+      - https://www.youtube.com/watch?v=K-FNSL2SzcY
+      - https://www.youtube.com/watch?v=rK4rGrhIWsk
+      - https://www.youtube.com/watch?v=NgvdpR9ySR4
+      - https://www.youtube.com/watch?v=nFlTzPl1lfA
+      - https://www.youtube.com/watch?v=2jKj7YC-IXE
+      - https://www.youtube.com/watch?v=HifBcFuKC9U
+      - https://www.youtube.com/watch?v=8zCXszF_y1U
+      - https://www.youtube.com/watch?v=Xy4W-srVSGc
+      - https://www.youtube.com/watch?v=t39lnVSROpQ
+      - https://www.youtube.com/watch?v=-wFf73rBdPE
+      - https://www.youtube.com/watch?v=hjzQrjbGZi0
+      - https://www.youtube.com/watch?v=QVGHS3frwzw
+      - https://www.youtube.com/watch?v=FobedfVmMSo
+      - https://www.youtube.com/watch?v=nAL0RoHJSTc
+      - https://www.youtube.com/watch?v=-E60tXVMUjU
+      - https://www.youtube.com/watch?v=HPQQng93wXk
+      - https://www.youtube.com/watch?v=54Bq9Qt-cBY
+      - https://www.youtube.com/watch?v=4R656lpy3Kk
+      - https://www.youtube.com/watch?v=Z6DxKJsylJY
+      - https://www.youtube.com/watch?v=JiJ5a4CXRF8
+      - https://www.youtube.com/watch?v=0ZwK0_N1ug0
+      - https://www.youtube.com/watch?v=Yapdso_6EGA
+      - https://www.youtube.com/watch?v=m_CWNZ870eI
+      - https://www.youtube.com/watch?v=1Lfa7FEK3hM
+      - https://www.youtube.com/watch?v=etUlUnEOuVk
+      - https://www.youtube.com/watch?v=Y759HZI7JJo
+      - https://www.youtube.com/watch?v=7PnM3DOLOo0
+      - https://www.youtube.com/watch?v=iA5gD8ZKMQ4
+      - https://www.youtube.com/watch?v=vrXvLFK9-jI
+      - https://www.youtube.com/watch?v=DFYnIa4bEkE
+      - https://www.youtube.com/watch?v=67qGS4SJx1M
+      - https://www.youtube.com/watch?v=wSHdhJc165s
+      - https://www.youtube.com/watch?v=AA2QyQI3rZs
+      - https://www.youtube.com/watch?v=OsyG2WQ_5V8
+      - https://www.youtube.com/watch?v=JMus67jDSCg
+      - https://www.youtube.com/watch?v=HVd218XV4mY
+      - https://www.youtube.com/watch?v=60ZLDsUEehM
+      - https://www.youtube.com/watch?v=33n-Wb1bpzU
+      - https://www.youtube.com/watch?v=LMYdF9bcyUg
+      - https://www.youtube.com/watch?v=UHdw2ay2SdU
+      - https://www.youtube.com/watch?v=ixs9XutuOSA
+      - https://www.youtube.com/watch?v=2djFmeZRk6A
+      - https://www.youtube.com/watch?v=iLCQO9huLPA
+      - https://www.youtube.com/watch?v=Q_M6asDzy8c
+      - https://www.youtube.com/watch?v=_3WN-6CI1Po
+      - https://www.youtube.com/watch?v=bzcRoFx4gKg
+      - https://www.youtube.com/watch?v=jWGCBw8mnko
+      - https://www.youtube.com/watch?v=dZLn-eRsqpA
+      - https://www.youtube.com/watch?v=lMnW61pugqc
+      - https://www.youtube.com/watch?v=KFPUyvmxNZk
+      - https://www.youtube.com/watch?v=jGI5NpbOkLg
+      - https://www.youtube.com/watch?v=Z8t0lNEmnHQ
+      - https://www.youtube.com/watch?v=OIJtyB3yxkY
+      - https://www.youtube.com/watch?v=LS3CmWgFNdA
+      - https://www.youtube.com/watch?v=6AcEzLchDi0
+      - https://www.youtube.com/watch?v=E36PHCemS28
+      - https://www.youtube.com/watch?v=ELr-OfEjkmY
+      - https://www.youtube.com/watch?v=22-AGHF9xhE
+      - https://www.youtube.com/watch?v=31-sNh7llJ8
+      - https://www.youtube.com/watch?v=9pFZqopxb3Y
+      - https://www.youtube.com/watch?v=AgmF7UvJIpw
+      - https://www.youtube.com/watch?v=-XuXGOi1dYc
+      - https://www.youtube.com/watch?v=08HU2nTYFLU
+      - https://www.youtube.com/watch?v=tvYy7FD6HqE
+      - https://www.youtube.com/watch?v=ciQwuB8JG6E
+      - https://www.youtube.com/watch?v=Nt8ji8aI6pU
+      - https://www.youtube.com/watch?v=8gl4No490gQ
+      - https://www.youtube.com/watch?v=ejmuKUiwyhI
+      - https://www.youtube.com/watch?v=drZJanaAxf0
+      - https://www.youtube.com/watch?v=6i6iZdyOEOo
+      - https://www.youtube.com/watch?v=um2gubRRmYA
+      - https://www.youtube.com/watch?v=_qElFSQA1KE
+      - https://www.youtube.com/watch?v=qSZ7frslX5I
+      - https://www.youtube.com/watch?v=BhKKURysda4
+      - https://www.youtube.com/watch?v=FU688R_1Th4
+      - https://www.youtube.com/watch?v=XY3guHHMcrE
+      - https://www.youtube.com/watch?v=V8AmT1tnqGo
+      - https://www.youtube.com/watch?v=czH647G8dmg
+      - https://www.youtube.com/watch?v=fQQ1feqs-vw
+      - https://www.youtube.com/watch?v=5eyktXiWAq4
+      - https://www.youtube.com/watch?v=H_6VRrSaND0
+      - https://www.youtube.com/watch?v=x4qNIQKtxVo
+      - https://www.youtube.com/watch?v=UDBtPy6GQkI
+  related_urls:
+  - label: Conference schedule
+    url: https://www.pycon.it/p3/schedule/pycon9/
+  # ~ language: eng
+  dates:
+    begin: 2018-04-19
+    end: 2018-04-22
+    default: 2018-04-20
+  issue: 489
+  minimal_download: true
+  tags:

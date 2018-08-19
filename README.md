@@ -57,7 +57,9 @@ language | Videos ISO_639-3 language code
 dates | Three ISO 8601 Dates between which videos were recorded (YYYY-MM-DD[Thh:mm[+hh:mm]])
 dates.begin | Start date of the event
 dates.end | End date of the event
-dates.default | Default date to use when the videos dont have a date between begin and end
+dates.default | Default date to use when the videos don't have a date between begin and end
 issue | Github issue solved scraping this videos
 minimal_download | Download only the fields that don't need human intervention, intended for a first download that exposes the minimal data.
 tags | Tags common to all events in video
+
+The files `events_minimal_download.yml` and `events_done.yml` are manually saved to ease future data reload (especially minimal_download file).

@@ -2,31 +2,30 @@ repo_dir: ~/git/pyvideo_data
 
 events:
 
-- title: PyCon Israel 2018
-  dir: pycon-israel-2018
-  youtube_list:
-  - https://www.youtube.com/watch?v=AcZJUQ3y2ek
-#  - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFw-jiYORKjzwyPR337TtX9X
-#  - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFyf20n-6rceqPVyVd6z5O5X
-#  - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFwWy00AG8GeVJj61I_Epg7u
+# Copy the event template here and adapt to the event parameters
 
-  # ~ - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFzfirPyzua7XZh9a6FMGkjX
-  # ~ - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFyS6q6bZBWlhOrVDSsLg0br
-  # ~ - https://www.youtube.com/playlist?index=1&playnext=1&list=PLnOlTVPC-yFzCzvBKSwF3nNhnI3XZQz3u
+
+
+# Only repo_dir: and events: are loaded
+
+# =============================================================================
+event_template:
+
+- title: PyConxxx2018
+  dir: pyconxxx
+  youtube_list:
+    - xxx
   related_urls:
   - label: Conference schedule
-    url: https://il.pycon.org/2018/schedule/
+    url: xxx
   language: eng
   dates:
-    begin: 2018-06-04
-    end: 2018-06-05
-    default: 2018-06-04
-  issue: 508
-  minimal_download: false
-#  tags:
-#    - test
-#    - more test
-
+    begin: xxx
+    end: xxx
+    default: xxx
+  issue: xxx
+  minimal_download: true
+  tags:
 
 # ISO_639-3 language codes https://en.wikipedia.org/wiki/ISO_639-3
 
@@ -48,21 +47,6 @@ events:
 #     'jpn': 'Japanese',
 #     'ces': 'Czech',
 #     'pol': 'Polish',
+#     'heb': 'Hebrew',
 # }
-
-
-done_events:
-
-- title: PyData Amsterdam 2018
-  dir: pydata-amsterdam-2018
-  youtube_list: https://www.youtube.com/playlist?list=PLGVZCDnMOq0rAn6c8OIbPdw1xebhhyoHN
-  language: eng
-  related_urls:
-  - label: Conference schedule
-    url: https://pydata.org/amsterdam2018/schedule/
-  dates:
-    begin: 2018-05-25
-    end: 2018-05-27
-    default: 2018-05-26
-  issue: 507
 
