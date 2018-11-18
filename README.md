@@ -25,6 +25,7 @@ cd ~/git/pyvideo_scrape
 
 $EDITOR events.yml  # Add the conferences to scrape (see format below)
 pipenv shell
+pipenv update youtube-dl  # This should be good from time to time
 ./pyvideo_scrape.py
 ~~~
 
