@@ -3,7 +3,6 @@
 
 minimal_download:
 
-
 # == [ 2012 ] =================================================================
 
 - title: PyCon Ar 2012
@@ -53,6 +52,22 @@ minimal_download:
     end: 2012-09-16
     default: 2012-09-15
   issue: 41
+  minimal_download: true
+  tags:
+
+- title: PyCon Philippines 2012
+  dir: pycon-ph-2012
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLCBCxsuKTqkAPJFl4O8dTBRJdfHMuT76I
+  related_urls:
+  - label: Conference schedule (external web)
+    url: https://www.pydanny.com/pycon-philippines-day-1.html
+  language: eng
+  dates:
+    begin: 2012-06-30
+    end: 2012-07-01
+    default: 2012-06-30
+  issue: 616
   minimal_download: true
   tags:
 
@@ -307,6 +322,21 @@ minimal_download:
   minimal_download: true
   tags:
 
+- title: PyCon Philippines 2015
+  dir: pycon-ph-2015
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLCBCxsuKTqkB4qypKQ1oKgmpTGRjqlYyS
+  related_urls:
+  - label: Conference schedule
+    url: https://pycon-2015.python.ph/schedule.html
+  language: eng
+  dates:
+    begin: 2015-06-04
+    end: 2015-06-05
+    default: 2015-06-04
+  issue: 615
+  minimal_download: true
+  tags:
 
 # == [ 2016 ] =================================================================
 
@@ -339,6 +369,22 @@ minimal_download:
     end: 2016-06-23
     default: 2016-06-23
   issue: 29
+  minimal_download: true
+  tags:
+
+- title: PyCon Philippines 2016
+  dir: pycon-ph-2016
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLCBCxsuKTqkCs_V098h4p6QcVZ7CJ7Lie
+  related_urls:
+  - label: Conference schedule
+    url: https://pycon-2016.python.ph/#schedule
+  language: eng
+  dates:
+    begin: 2016-02-27
+    end: 2016-02-28
+    default: 2016-02-27
+  issue: 614
   minimal_download: true
   tags:
 
@@ -535,6 +581,67 @@ minimal_download:
   minimal_download: true
   tags:
 
+- title: PyCon Philippines 2017
+  dir: pycon-ph-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLCBCxsuKTqkB2u-P7KMNNkHYXzKBXEyZc
+  related_urls:
+  - label: Conference schedule
+    url: https://pycon-2017.python.ph/#schedule
+  language: eng
+  dates:
+    begin: 2017-02-25
+    end: 2017-02-26
+    default: 2017-02-25
+  issue: 613
+  minimal_download: true
+  tags:
+
+- title: PyData Warsaw 2017
+  dir: pydata-warsaw-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLGVZCDnMOq0oe0eD-edj_2CuBIZ938bWT
+  related_urls:
+  - label: Conference schedule
+    url: https://pydata.org/warsaw2017/schedule/
+  language: eng
+  dates:
+    begin: 2017-10-18
+    end: 2017-10-20
+    default: 2017-10-19
+  issue: 424
+  minimal_download: true
+  tags:
+
+- title: Pyninsula 2017
+  dir: pyninsula-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLG7O5yXq5eayxiq1EVBE906gVJ4UiTxG9
+  related_urls:
+  - label: Group web
+    url: http://pyninsula.org/
+  - label: Group meeting schedule
+    url: https://www.meetup.com/Pyninsula-Python-Peninsula-Meetup/
+  language: eng
+  issue: 642
+  minimal_download: true
+  tags:
+
+# Duplicate
+- title: North Bay Python 2017
+  dir: north-bay-python-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLaeNpBNgqQWvWl273wwS3f-iEgDWNuoxN
+  related_urls:
+  - label: Group web
+    url: https://2017.northbaypython.org/
+  - label: Group meeting schedule
+    url: https://2017.northbaypython.org/schedule/
+  language: eng
+  issue: 637
+  minimal_download: true
+  tags:
+
 # == [ 2018 ] =================================================================
 
 - title: PyData Berlin 2018
@@ -687,12 +794,110 @@ minimal_download:
   minimal_download: true
   tags:
 
+- title: PyCon ZA 2018
+  dir: pycon-za-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLGjWYNrNnSuc78h5x23A5mLAzWlCl9LGf
+  related_urls:
+  - label: Conference schedule
+    url: https://2018.za.pycon.org/schedule/
+  language: eng
+  dates:
+    begin: 2018-10-11
+    end: 2018-10-12
+    default: 2018-10-11
+  issue: 588
+  minimal_download: true
+  tags:
+
+- title: PyCon UK 2018
+  dir: pycon-uk-2018
+  youtube_list:
+    # 2018-09-15 # TODO: Add dates to lists
+    - https://www.youtube.com/watch?v=PCIBNnU90Ss&list=PLrkpavSsBQZ6RqewjANdmC94nsXRnmKMc
+    - https://www.youtube.com/watch?v=BC0agLto2tQ&list=PLrkpavSsBQZ6jA7Jg65nfKIyfOaeMJQXU
+    - https://www.youtube.com/watch?v=-weU0Zy4Yd8&list=PLrkpavSsBQZ5cLFUhjj9N8nTCHh2-nlQh
+    # 2018-09-16
+    - https://www.youtube.com/watch?v=0OcHs9FGvdA&list=PLrkpavSsBQZ4_W9i0RvM4ebvnC1GHuhVI
+    - https://www.youtube.com/watch?v=oXGWOoiMe2w&list=PLrkpavSsBQZ4NgL8kMaXDu2zdZvB0lJvG
+    - https://www.youtube.com/watch?v=p8895Xe5G6w&list=PLrkpavSsBQZ5m7vf3v-3jZRyZeM1CZF5F
+    - https://www.youtube.com/watch?v=n_Sp2hciNCQ&list=PLrkpavSsBQZ6jV1_075I2FRcmg6Qv8-LO
+    # 2018-09-17
+    - https://www.youtube.com/watch?v=kq9wOv545lE&list=PLrkpavSsBQZ6eHsOKzfNZK2-NberFDNqs
+    - https://www.youtube.com/watch?v=R-6n-WGMOU8&list=PLrkpavSsBQZ4VLxjAGMCkst6yau6aZkpN
+    # 2018-09-18
+    - https://www.youtube.com/watch?v=dQWdIxpvT5I&list=PLrkpavSsBQZ5BaUHxOd17g0deE8hgfrht
+    - https://www.youtube.com/watch?v=5LuvB3bD-QY&list=PLrkpavSsBQZ5ph6EdkC_W9dso02rOZXwE
+    # 2018-09-19
+    - https://www.youtube.com/watch?v=76Woe9QHzcs&list=PLrkpavSsBQZ6CyfT1HxBIR30x-XDyGHJn
+    # sponsor
+    - https://www.youtube.com/watch?v=BzYI5xVvNCk&list=PLrkpavSsBQZ6qwlOwBn5zAQ-sjsMP0OYt
+  related_urls:
+  - label: Conference schedule
+    url: http://2018.pyconuk.org/schedule/
+  language: eng
+  dates:
+    begin: 2018-09-15
+    end: 2018-09-19
+    default: 2018-09-15
+  issue: 590
+  minimal_download: true
+  tags:
+
+- title: PyCon Thailand 2018
+  dir: pycon-thailand-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLTv50MjNM7OpbcJbEs7EtfYGzliyPcMrV
+  related_urls:
+  - label: Conference schedule
+    url: https://th.pycon.org/en/schedule/
+  language: null
+  dates:
+    begin: 2018-06-15
+    end: 2018-06-17
+    default: 2018-06-16
+  issue: 592
+  minimal_download: true
+  tags:
+
+- title: PyCon Philippines 2018
+  dir: pycon-ph-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLCBCxsuKTqkD2kbRhbnckF62aiGzL9ar5
+  related_urls:
+  - label: Conference schedule
+    url: https://pycon-2018.python.ph//#schedule-section
+  language: eng
+  dates:
+    begin: 2018-02-24
+    end: 2018-02-25
+    default: 2018-02-24
+  issue: 612
+  minimal_download: true
+  tags:
+
+- title: PyCon Korea 2018
+  dir: pycon-kr-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLZPhyNeJvHRmnMr5yucZ9Eu-yVhjRRsOM
+  related_urls:
+  - label: Conference schedule
+    url: https://www.pycon.kr/2018/en/program/schedule/
+  language: kor
+  dates:
+    begin: 2018-08-18
+    end: 2018-08-19
+    default: 2018-08-18
+  issue: 617
+  minimal_download: true
+  tags:
+
 - title: PyCon Italia 2018
-  # ~ dir: pycon-italia-full
+  # dir: pycon-italia-full
   # grep '"recorded": "2018-' * -l | xargs -d '\n' grep -h 'watch?' |  tr -d '"' | sed -e 's/url:/-/'
   dir: pycon-italia-2018
   youtube_list:
-      # ~ - https://www.youtube.com/user/pyconitalia/videos
+    # ~ - https://www.youtube.com/user/pyconitalia/videos
       - https://www.youtube.com/watch?v=-UzMJiNLpG8
       - https://www.youtube.com/watch?v=RhtXHI5KRzw
       - https://www.youtube.com/watch?v=bO2lrE3gzFo
@@ -789,7 +994,7 @@ minimal_download:
   related_urls:
   - label: Conference schedule
     url: https://www.pycon.it/p3/schedule/pycon9/
-  # ~ language: eng
+  language: # ita
   dates:
     begin: 2018-04-19
     end: 2018-04-22
@@ -797,3 +1002,71 @@ minimal_download:
   issue: 489
   minimal_download: true
   tags:
+
+- title: PyCon DE 2018
+  dir: pycon-de-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLHd2BPBhxqRJpeduPspa9tZiHUix4X1zh
+  related_urls:
+  - label: Conference schedule
+    url: https://de.pycon.org/schedule/
+  language: eng
+  dates:
+    begin: 2018-10-24
+    end: 2018-10-26
+    default: 2018-10-24
+  issue: 634
+  minimal_download: true
+  tags:
+
+- title: PyBay 2018
+  dir: pybay-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PL85KuAjbN_gtsQXvgNkWWggwvnF54efRr
+  related_urls:
+  - label: Conference schedule
+    url: https://pybay.com/schedule/
+  language: eng
+  dates:
+    begin: 2018-08-16
+    end: 2018-08-19
+    default: 2018-08-18
+  issue: 639
+  minimal_download: true
+  tags:
+
+- title: PyCon Japan 2018
+  dir: pycon-jp-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLMkWB0UjwFGnuTXdWG6NP9WAg-_-2I8_e
+  related_urls:
+  - label: Conference schedule
+    url: https://pycon.jp/2018/en/event/conference
+  language: jpn
+  dates:
+    begin: 2018-09-17
+    end: 2018-09-18
+    default: 2018-09-17
+  issue: 636
+  minimal_download: true
+  tags:
+
+- title: PyCon Taiwan 2018
+  dir: pycon-tw-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLqtzN042Qpfc9mwS_vtmqIFQlnDc8dsym
+  related_urls:
+  - label: Conference schedule
+    url: https://tw.pycon.org/2018/en-us/events/schedule/
+  language: eng
+  dates:
+    begin: 2018-06-01
+    end: 2018-06-02
+    default: 2018-06-01
+  issue: 641
+  minimal_download: true
+  tags:
+
+# == [ 2019 ] =================================================================
+# == [ 2020 ] =================================================================
+

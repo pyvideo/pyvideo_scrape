@@ -53,3 +53,35 @@ done_events:
   issue: 503
   minimal_download: false
   tags:
+
+- title: PyCon Nigeria 2018
+  dir: pycon-ng-2018
+  youtube_list:
+    - https://www.youtube.com/watch?list=PLE2LJQvu0iDzXEnhBev7mfgjEOrLNwLbN
+  related_urls:
+  - label: Conference web
+    url: https://www.pycon.ng/
+  language: eng
+  dates:
+    begin: 2107-09-13
+    end: 2107-09-15
+    default: 2107-09-13
+  issue: 570
+  minimal_download: false
+  tags:
+
+- title: PyCon Estonia 2018
+  dir: pycon-estonia-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PL7GepHfJMNgxPzTXZcisXgMT5aTXOxoEN
+  related_urls:
+  - label: Conference website
+    url: https://pycon.ee/
+  language: eng
+  dates:
+    begin: 2018-10-04
+    end: 2018-10-04
+    default: 2018-10-04
+  issue: 635
+  minimal_download: false
+  tags:

@@ -48,5 +48,6 @@ event_template:
 #     'ces': 'Czech',
 #     'pol': 'Polish',
 #     'heb': 'Hebrew',
+#     'tha': 'Thai',
 # }
 
