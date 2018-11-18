@@ -177,7 +177,7 @@ class Event:
         sh.git.checkout(self.branch)
         sh.git.add(self.event_dir)
         if self.minimal_download:
-            message = 'Scraped {}\n\nminimal download executed for #{}'.format(self.branch, self.issue)
+            message = 'Minimal download: {}\n\nminimal download executed for #{}'.format(self.title, self.issue)
             sh.git.commit('-m', message)
             sh.git.push('--set-upstream', 'origin', self.branch)
             # ~ sh.git.push('--set-upstream', '--force', 'origin', self.branch)
