@@ -259,7 +259,9 @@ class Video:
             new_path = path
             while new_path.exists():
                 duplicate_num += 1
-                new_path = pathlib.PosixPath(path.stem + '-{}{}'.format(duplicate_num, path.suffix))
+                new_path = path.parent / (path.stem + '-{}{}'.format(duplicate_num, path.suffix))
+                LOGGER.debug('Duplicate, renaming to %s', path)
+            path = new_path
 
         data = {
             'title': self.title,
@@ -317,6 +319,7 @@ def main():
     LOGGER.debug('Time init: %s', time_init)
     LOGGER.debug('Time end: %s', time_end)
     LOGGER.debug('Time delta: %s', time_delta)
+    # TODO: mypy
 
 
 if __name__ == '__main__':
