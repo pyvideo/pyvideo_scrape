@@ -59,7 +59,8 @@ class Event:
             if mandatory_field in event_data and event_data[mandatory_field]:
                 pass
             else:
-                logger.error('No {} data in conference {}', mandatory_field, self.title)
+                logger.error('No {} data in conference {}', mandatory_field,
+                             self.title)
                 raise ValueError("{} can't be null".format(mandatory_field))
         self.issue = event_data['issue']
 
@@ -68,7 +69,8 @@ class Event:
         elif isinstance(event_data['youtube_list'], list):
             self.youtube_lists = event_data['youtube_list']
         else:
-            raise TypeError("youtube_list must be a string or a list of strings")
+            raise TypeError(
+                "youtube_list must be a string or a list of strings")
 
         self.related_urls = event_data.get('related_urls', [])
         self.language = event_data.get('language', None)
@@ -80,7 +82,8 @@ class Event:
             self.know_date = True
             self.date_begin = event_data['dates']['begin']
             self.date_end = event_data['dates'].get('end', self.date_begin)
-            self.date_default = event_data['dates'].get('default', self.date_begin)
+            self.date_default = event_data['dates'].get(
+                'default', self.date_begin)
         else:
             self.know_date = False
         self.minimal_download = event_data.get('minimal_download', False)
@@ -104,8 +107,11 @@ class Event:
     def create_category(self):  # , conf_dir, title):
         """Create category.json for the conference"""
         category_file_path = self.event_dir / 'category.json'
-        category_data = {'title': self.title, }
-        category_data_text = json.dumps(category_data, **JSON_FORMAT_KWARGS) + '\n'
+        category_data = {
+            'title': self.title,
+        }
+        category_data_text = json.dumps(category_data, **
+                                        JSON_FORMAT_KWARGS) + '\n'
         save_file(category_file_path, category_data_text)
         logger.debug('File {} created', category_file_path)
 
@@ -137,7 +143,8 @@ class Event:
         youtube_list = sum((scrape_url(url) for url in self.youtube_lists), [])
         for youtube_video_data in youtube_list:
             if youtube_video_data:  # Valid video
-                self.videos.append(Video(video_data=youtube_video_data, event=self))
+                self.videos.append(
+                    Video(video_data=youtube_video_data, event=self))
             else:
                 logger.warning('Null youtube video')
 
@@ -152,7 +159,8 @@ class Event:
         sh.git.checkout(self.branch)
         sh.git.add(self.event_dir)
         if self.minimal_download:
-            message = 'Minimal download: {}\n\nminimal download executed for #{}'.format(self.title, self.issue)
+            message = 'Minimal download: {}\n\nminimal download executed for #{}'.format(
+                self.title, self.issue)
             sh.git.commit('-m', message)
             sh.git.push('--set-upstream', 'origin', self.branch)
             # ~ sh.git.push('--set-upstream', '--force', 'origin', self.branch)
@@ -187,9 +195,12 @@ class Video:
     def __calculate_date_recorded(self, upload_date_str):
         """Calculate record date from youtube field and event dates"""
 
-        upload_date = datetime.date(int(upload_date_str[0:4]), int(upload_date_str[4:6]), int(upload_date_str[6:8]))
+        upload_date = datetime.date(
+            int(upload_date_str[0:4]),
+            int(upload_date_str[4:6]), int(upload_date_str[6:8]))
         if self.event.know_date:
-            if not (self.event.date_begin <= upload_date <= self.event.date_end):
+            if not (self.event.date_begin <= upload_date <=
+                    self.event.date_end):
                 return self.event.date_default.isoformat()
 
         return upload_date.isoformat()
@@ -204,12 +215,14 @@ class Video:
         # self.thumbnail_url = 'https://i.ytimg.com/vi/{}/maxresdefault.jpg'.format(youtube_id)
         self.thumbnail_url = video_data['thumbnail']
         self.videos = [{'type': 'youtube', 'url': video_data['webpage_url']}]
-        self.recorded = self.__calculate_date_recorded(video_data['upload_date'])
+        self.recorded = self.__calculate_date_recorded(
+            video_data['upload_date'])
 
         # optional values
         self.copyright_text = video_data['license']
         self.duration = video_data['duration']  # In seconds
-        self.language = video_data['formats'][0].get('language', event.language)
+        self.language = video_data['formats'][0].get('language',
+                                                     event.language)
         if not self.language:
             self.language = event.language
         self.related_urls = copy.deepcopy(event.related_urls)
@@ -221,7 +234,10 @@ class Video:
         else:
             self.tags = sorted(set(video_data['tags']).union(set(event.tags)))
             self.description = video_data['description']
-            description_urls = list(set(re.findall(r'http[s]?://[^ \\\n\t()[\]"`´\']+', video_data['description'])))
+            description_urls = list(
+                set(
+                    re.findall(r'http[s]?://[^ \\\n\t()[\]"`´\']+', video_data[
+                        'description'])))
             for url in description_urls:
                 self.related_urls.append({'label': url, 'url': url})
 
@@ -233,7 +249,8 @@ class Video:
             new_path = path
             while new_path.exists():
                 duplicate_num += 1
-                new_path = path.parent / (path.stem + '-{}{}'.format(duplicate_num, path.suffix))
+                new_path = path.parent / (
+                    path.stem + '-{}{}'.format(duplicate_num, path.suffix))
                 logger.debug('Duplicate, renaming to {}', path)
             path = new_path
 
@@ -262,7 +279,11 @@ class Video:
 def main():
     """Scrape several conferences into pyvideo repository"""
 
-    logger.add(sys.stderr, format="{time} {level} {message}", filter="my_module", level="DEBUG")
+    logger.add(
+        sys.stderr,
+        format="{time} {level} {message}",
+        filter="my_module",
+        level="DEBUG")
 
     time_init = datetime.datetime.now()
     logger.debug('Time init: {}', time_init)
@@ -273,8 +294,12 @@ def main():
     events_file = cwd / 'events.yml'
     events_data = load_events(events_file)
 
-    pyvideo_repo = pathlib.PosixPath(events_data['repo_dir']).expanduser().resolve()
-    events = [Event(event_data, repository_path=pyvideo_repo) for event_data in events_data['events']]
+    pyvideo_repo = pathlib.PosixPath(
+        events_data['repo_dir']).expanduser().resolve()
+    events = [
+        Event(event_data, repository_path=pyvideo_repo)
+        for event_data in events_data['events']
+    ]
     for event in events:
         try:
             event.create_branch()
