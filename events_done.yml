@@ -85,3 +85,54 @@ done_events:
   issue: 635
   minimal_download: false
   tags:
+
+- title: OdessaPy 2018
+  dir: odessapy-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLSz0DLCG4eGqbmdAWca2us5eWJenKb8ji
+  related_urls:
+  - label: Conference schedule
+    url: https://odessapyconf.org.ua/en/#schedule
+  - label: Conference slides
+    url: https://www.slideshare.net/OdessaPyConference/presentations
+  language: eng
+  dates:
+    begin: 2018-09-28
+    end: 2018-09-30
+    default: 2018-09-30
+  issue: 640
+  minimal_download: false
+  tags:
+
+- title: PyAstro 2018
+  dir: pyastro-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PL7P5HEbvYRSbLyM84sujBN2xPhIW5zDxk
+  related_urls:
+  - label: Conference web
+    url: http://openastronomy.org/pyastro/2018/
+  language: eng
+  dates:
+    begin: 2018-04-30
+    end: 2018-05-04
+    default: 2018-04-30
+  issue: 664
+  minimal_download: false
+  tags:
+
+- title: PyCon Colombia 2018
+  dir: pycon-co-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLkq0V5comsc8pLucDMfxovjN6c8vbe7VP
+  related_urls:
+  - label: Conference schedule
+    url: https://2018.pycon.co/talks/
+  language: spa
+  dates:
+    begin: 2018-02-09
+    end: 2018-02-11
+    default: 2018-02-09
+  issue: 685
+  minimal_download: false
+  tags:
+

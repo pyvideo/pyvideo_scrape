@@ -89,6 +89,22 @@ minimal_download:
   minimal_download: true
   tags:
 
+- title: EuroPython 2013
+  dir: europython-2013
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PL8uoeex94UhF5drIP18ZB9uU3r2P_DARE
+  related_urls:
+  - label: Conference schedule
+    url: https://www.pycon.it/en/ep2013/
+  language: eng
+  dates:
+    begin: 2013-07-01
+    end: 2013-07-06
+    default: 2013-07-03
+  issue: 662
+  minimal_download: true
+  tags:
+
 # == [ 2014 ] =================================================================
 
 - title: PyCon India 2014
@@ -642,6 +658,38 @@ minimal_download:
   minimal_download: true
   tags:
 
+- title: PyCon India 2017
+  dir: pycon-india-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PL6GW05BfqWIebMtGTSzrafZi2HWORxzu0
+  related_urls:
+  - label: Conference schedule
+    url: https://in.pycon.org/2017/#schedule
+  language: eng
+  dates:
+    begin: 2017-11-02
+    end: 2017-11-05
+    default: 2017-11-04
+  issue: 659
+  minimal_download: true
+  tags:
+
+- title: Python Sudeste 2017
+  dir: python-sudeste-2017
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLA-HOyS1nFHd3Ui4fSuDGhgsie8TD8nK0
+  related_urls:
+  - label: Conference schedule
+    url: https://2017.pythonsudeste.org/#schedule
+  language: por
+  dates:
+    begin: 2017-05-05
+    end: 2017-05-07
+    default: 2017-05-05
+  issue: 822
+  minimal_download: true
+  tags:
+
 # == [ 2018 ] =================================================================
 
 - title: PyData Berlin 2018
@@ -1067,6 +1115,793 @@ minimal_download:
   minimal_download: true
   tags:
 
+- title: JupyterCon 2018
+  dir: jupytercon-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PL055Epbe6d5b572IRmYAHkUgcq3y6K3Ae
+  related_urls:
+  - label: Conference schedule
+    url: https://conferences.oreilly.com/jupyter/jup-ny/public/schedule/full/public
+  language: eng
+  dates:
+    begin: 2018-08-21
+    end: 2018-08-24
+    default: 2018-08-21
+  issue: 663
+  minimal_download: true
+  tags:
+
+- title: PyCaribbean 2018
+  dir: pycaribbean-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLW4Oc02uR1b2i0WDqolDNYiUMGAPYpKX0
+  related_urls:
+  - label: Conference schedule
+    url: https://web.archive.org/web/20180818163717/http://pycaribbean.com/schedule
+  language: eng
+  dates:
+    begin: 2018-02-17
+    end: 2018-02-18
+    default: 2018-02-17
+  issue: 655
+  minimal_download: true
+  tags:
+
+- title: Caipyra 2018
+  dir: caipyra-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLhJjEHCkDOLuPbeibRdXlfERPO6_WfXYV
+  related_urls:
+  - label: Conference schedule
+    url: https://web.archive.org/web/20181118082822/http://caipyra.python.org.br/#palestras
+  language: por
+  dates:
+    begin: 2018-06-08
+    end: 2018-06-08
+    default: 2018-06-11
+  issue: 656
+  minimal_download: true
+  tags:
+
+- title: DjangoCon US 2018
+  dir: djangocon-us-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PL2NFhrDSOxgW5tKoKmUyuubsbTfRgvT6z
+  related_urls:
+  - label: Conference schedule
+    url: https://2018.djangocon.us/schedule/
+  language: eng
+  dates:
+    begin: 2018-10-14
+    end: 2018-10-14
+    default: 2018-10-19
+  issue: 657
+  minimal_download: true
+  tags:
+
+- title: Write the Docs Prague 2018
+  dir: writethedocs-eu-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLZAeFn6dfHplRZcYDQjST22bAVeeWML4d
+  related_urls:
+  - label: Conference schedule
+    url: http://www.writethedocs.org/conf/prague/2018/schedule/
+  - label: Conference video documentation
+    url: http://www.writethedocs.org/videos/prague/2018/
+  language: eng
+  dates:
+    begin: 2018-09-09
+    end: 2018-09-11
+    default: 2018-09-10
+  issue: 660
+  minimal_download: true
+  tags:
+
+- title: Write the Docs Portland 2018
+  dir: writethedocs-na-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLZAeFn6dfHplUgfLOLEuHHAm1HdrIyaZ7
+  related_urls:
+  - label: Conference schedule
+    url: http://www.writethedocs.org/conf/portland/2018/schedule/
+  language: eng
+  dates:
+    begin: 2018-05-06
+    end: 2018-05-08
+    default: 2018-05-06
+  issue: 661
+  minimal_download: true
+  tags:
+
+- title: PyParis 2018
+  dir: pyparis-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLzjFI0G5nSsry3cm_k1tPOi9SRaAXsZAt
+  related_urls:
+  - label: Conference schedule
+    url: http://pyparis.org/static/pdf/Schedule-PyParis-2018.pdf
+  - label: Conference web
+    url: http://pyparis.org/
+  # language: eng
+  dates:
+    begin: 2018-11-14
+    end: 2018-11-15
+    default: 2018-11-14
+  issue: 674
+  minimal_download: true
+  tags:
+
+- title: PyCon Balkan Belgrade 2018
+  dir: pycon-balkan-2018
+  youtube_list:
+    - https://www.youtube.com/watch?v=WrPVhlXGLF0
+    - https://www.youtube.com/watch?v=7xxvM_4IAoA
+    - https://www.youtube.com/watch?v=fUg334jwj4Q
+    - https://www.youtube.com/watch?v=YoMcj4_lTqM
+    - https://www.youtube.com/watch?v=D7XJHGuYEUE
+    - https://www.youtube.com/watch?v=3WEUsO9wSBY
+  related_urls:
+  - label: Conference schedule
+    url: https://web.archive.org/web/20181123180627/https://pyconbalkan.s3.amazonaws.com/1542191564120.pdf?AWSAccessKeyId=AKIAJEVH4XENBYDDRAMA&Signature=g2XhL0Z5NECdF9lRigVaNZr3MBI%3D&Expires=1542999962
+  language: eng
+  dates:
+    begin: 2018-11-16
+    end: 2018-11-18
+    default: 2018-11-16
+  issue: 675
+  minimal_download: true
+  tags:
+
+- title: PyCon HK 2018
+  dir: pycon-hk-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PL5E5Uyv1pQujtRl5pk3jHWN3_tiYs6Qlu
+  related_urls:
+  - label: Conference schedule
+    url: http://pycon.hk/schedule-2018/
+  language: eng
+  dates:
+    begin: 2018-11-23
+    end: 2018-11-24
+    default: 2018-11-23
+  issue: 684
+  minimal_download: true
+  tags:
+
+- title: North Bay Python 2018
+  dir: north-bay-python-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLaeNpBNgqQWtvJK5qBVXfFiGJoUPIt6Fq
+  related_urls:
+  - label: Group web
+    url: https://2018.northbaypython.org/
+  - label: Group meeting schedule
+    url: https://2018.northbaypython.org/schedule/
+  language: eng
+  dates:
+    begin: 2018-11-03
+    end: 2018-11-04
+    default: 2018-11-03
+  issue: 637
+  minimal_download: true
+  tags:
+
+- title: EuroSciPy 2018
+  dir: euroscipy-2018
+  # grep '"recorded": "2018-' * -l | xargs -d '\n' grep -h 'watch?' |  tr -d '"' | sed -e 's/url:/-/'
+  youtube_list:
+      # - https://www.youtube.com/channel/UCruMegFU9dg2doEGOUaAWTg/videos
+      - https://www.youtube.com/watch?v=CePrdabdtxw
+      - https://www.youtube.com/watch?v=eG-Cr4dLGJk
+      - https://www.youtube.com/watch?v=gS7kVg-4ZaU
+      - https://www.youtube.com/watch?v=IpcN317-9LM
+      - https://www.youtube.com/watch?v=MvZt5dmoJ5M
+      - https://www.youtube.com/watch?v=6nFllDegCTY
+      - https://www.youtube.com/watch?v=N4q_Vud77Hw
+      - https://www.youtube.com/watch?v=ToYFc_AcKU0
+      - https://www.youtube.com/watch?v=vl9La7wH7QI
+      - https://www.youtube.com/watch?v=XGqlpQ4AumE
+      - https://www.youtube.com/watch?v=dq5bLgLGae8
+      - https://www.youtube.com/watch?v=nARfsX63nDc
+      - https://www.youtube.com/watch?v=0Lc1SsuP8U8
+      - https://www.youtube.com/watch?v=bWsA2R707BM
+      - https://www.youtube.com/watch?v=KOC9EOQyU0k
+      - https://www.youtube.com/watch?v=mkQzl2v7BuI
+      - https://www.youtube.com/watch?v=p4t9dMKxZAo
+      - https://www.youtube.com/watch?v=s-g3E3aAgEo
+      - https://www.youtube.com/watch?v=SqniBlPflR0
+      - https://www.youtube.com/watch?v=DO3tn_I1P-8
+      - https://www.youtube.com/watch?v=s00EfMrZpSs
+      - https://www.youtube.com/watch?v=LAMwEJZqesU
+      - https://www.youtube.com/watch?v=9Lbd0ApYJ-0
+      - https://www.youtube.com/watch?v=qTgk2DUM6G0
+      - https://www.youtube.com/watch?v=YrnHdgZ8n1U
+      - https://www.youtube.com/watch?v=o-6nuopYIcs
+      - https://www.youtube.com/watch?v=iTOC8TQrF_U
+      - https://www.youtube.com/watch?v=R2rCYf3pv-M
+      - https://www.youtube.com/watch?v=sunNXIxIGV8
+      - https://www.youtube.com/watch?v=Cz_u2If7KbI
+      - https://www.youtube.com/watch?v=pgnnf3jmZF0
+      - https://www.youtube.com/watch?v=fpX9yvIp160
+      - https://www.youtube.com/watch?v=I9NeF9oAmbg
+      - https://www.youtube.com/watch?v=B4Hu_7_XBDM
+      - https://www.youtube.com/watch?v=EWDOmVimdrU
+      - https://www.youtube.com/watch?v=x4DI5518Ef4
+      - https://www.youtube.com/watch?v=Vs7tdobwj1k
+      - https://www.youtube.com/watch?v=0eYOhEF_aK0
+      - https://www.youtube.com/watch?v=C6ni_WoMXhU
+      - https://www.youtube.com/watch?v=QK2ydXN8yv4
+      - https://www.youtube.com/watch?v=nfRyux3wEhw
+      - https://www.youtube.com/watch?v=HTSUCJn1NCA
+      - https://www.youtube.com/watch?v=mxRhgEAypzE
+      - https://www.youtube.com/watch?v=WSEi_a2k19c
+      - https://www.youtube.com/watch?v=mc8ru37dwf8
+      - https://www.youtube.com/watch?v=kWg5ygNY2Pw
+      - https://www.youtube.com/watch?v=HpGgms5uZaY
+      - https://www.youtube.com/watch?v=3btpy146nGc
+      - https://www.youtube.com/watch?v=68kFQOC-FTk
+      - https://www.youtube.com/watch?v=u2fR-PR56CU
+      - https://www.youtube.com/watch?v=utLg03Pu754
+      - https://www.youtube.com/watch?v=EABNkHRtMLo
+      - https://www.youtube.com/watch?v=H-K_fSA54AM
+      - https://www.youtube.com/watch?v=VHeTl9xsnGM
+      - https://www.youtube.com/watch?v=KmviFRjejoc
+      - https://www.youtube.com/watch?v=P23kTmnG7Lc
+      - https://www.youtube.com/watch?v=sqKoR9x8AC0
+      - https://www.youtube.com/watch?v=TGmG9PAHNNU
+      - https://www.youtube.com/watch?v=j6cYeBANw4I
+      - https://www.youtube.com/watch?v=3nPKswcwomA
+      - https://www.youtube.com/watch?v=MB1ZoiV2zpE
+      - https://www.youtube.com/watch?v=k4xZArDuYus
+      - https://www.youtube.com/watch?v=J32Guga4mtM
+      - https://www.youtube.com/watch?v=Wtm7Iy-wEUI
+      - https://www.youtube.com/watch?v=aprFsDq5KGY
+      - https://www.youtube.com/watch?v=1PW_WjGn78c
+      - https://www.youtube.com/watch?v=naW4ptoaDR8
+      - https://www.youtube.com/watch?v=r6wnj9Ju6og
+      - https://www.youtube.com/watch?v=OljMZ5ipI-k
+      - https://www.youtube.com/watch?v=_1uIzEfDTKk
+      - https://www.youtube.com/watch?v=Qz6HmfzrABA
+      - https://www.youtube.com/watch?v=vTqYh8vE2eE
+      - https://www.youtube.com/watch?v=dGHIHCzabOM
+  related_urls:
+  - label: Conference schedule
+    url: https://www.euroscipy.org/2018/program.html
+  language: eng
+  dates:
+    begin: 2018-08-28
+    end: 2018-08-31
+    default: 2018-08-28
+  issue: 658
+  minimal_download: true
+  tags:
+
+- title: PyData Warsaw 2018
+  dir: pydata-warsaw-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLGVZCDnMOq0q2bRdYVZbINDymJo-L5EQX
+  related_urls:
+  - label: Conference schedule
+    url: https://pydata.org/warsaw2018/schedule/
+  language: eng
+  dates:
+    begin: 2018-11-19
+    end: 2018-11-20
+    default: 2018-11-19
+  issue: 713
+  minimal_download: true
+  tags:
+
+- title: Python Brasil 2018
+  dir: pythonbrasil-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLDC3uVLxaEQ3Jd6ZNeNyEoCNkp05vRujQ
+  related_urls:
+  - label: Conference schedule
+    url: https://2018.pythonbrasil.org.br/programacao
+  language: por
+  dates:
+    begin: 2018-10-17
+    end: 2018-10-22
+    default: 2018-10-17
+  issue: 695
+  minimal_download: true
+  tags:
+
+- title: PyData Tokyo 2018
+  dir: pydata-tokyo-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLRKlFncKksU1f12LAMQSMC4YsBb5pUBKb
+  related_urls:
+  - label: Conference schedule
+    url: https://pydata.tokyo
+  language: jpn
+  dates:
+    begin: 2018-10-20
+    end: 2018-10-20
+    default: 2018-10-20
+  issue: 734
+  minimal_download: true
+  tags:
+
+- title: PyCon Ireland 2018
+  dir: pycon-ireland-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLNeBS51Q0m9_EsF_j4UaMQj3x6-abfcDO
+  related_urls:
+  - label: Conference schedule
+    url: http://schedule.pycon18.python.ie/
+  language: eng
+  dates:
+    begin: 2018-11-10
+    end: 2018-11-11
+    default: 2018-11-10
+  issue: 736
+  minimal_download: true
+  tags:
+
+
+- title: PyData New York City 2018
+  dir: pydata-new-york-city-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLGVZCDnMOq0qaT_ji1YQ5O4bWTEarj9J8
+  related_urls:
+  - label: Conference schedule
+    url: https://pydata.org/nyc2018/schedule/
+  language: eng
+  dates:
+    begin: 2018-08-17
+    end: 2018-08-19
+    default: 2018-08-17
+  issue: 740
+  minimal_download: true
+  tags:
+
+- title: PyData DC 2018
+  dir: pydata-dc-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLGVZCDnMOq0p9pa2s8WXdjk7nU8iei9ay
+  related_urls:
+  - label: Conference schedule
+    url: https://pydata.org/dc2018/schedule/
+  language: eng
+  dates:
+    begin: 2018-11-16
+    end: 2018-11-18
+    default: 2018-11-16
+  issue: 735
+  minimal_download: true
+  tags:
+
+- title: PyCon Colombia 2018
+  dir: pycon-co-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLkq0V5comsc8pLucDMfxovjN6c8vbe7VP
+  related_urls:
+  - label: Conference schedule
+    url: https://2018.pycon.co/#tab-2018-02-09
+  language: spa
+  dates:
+    begin: 2018-02-09
+    end: 2018-02-11
+    default: 2018-02-09
+  issue: 685
+  minimal_download: true
+  tags:
+
+- title: PyCon SE 2018
+  dir: python-se-2018
+  youtube_list:
+    - https://www.youtube.com/watch?v=aftELoqJNFk&list=PLQYPYhKQVTvcwrAoYYtexjdD3oJSyneXL
+  related_urls:
+  - label: Conference schedule
+    url: http://www.pycon.se/#schedule
+  language: eng
+  dates:
+    begin: 2018-12-12
+    end: 2018-12-12
+    default: 2018-12-12
+  issue: 751
+  minimal_download: true
+  tags:
+
+- title: PyCon Belarus 2018
+  dir: pycon-belarus-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLpVeA1tdgfCAUk_wbOeUrFBz0WxZJ8s7y
+  related_urls:
+  - label: Conference schedule
+    url: https://web.archive.org/web/20180720115405/https://by.pycon.org/
+  language: eng
+  dates:
+    begin: 2018-02-24
+    end: 2018-02-24
+    default: 2018-02-24
+  issue: 753
+  minimal_download: true
+  tags:
+
+- title: PyCon India 2018
+  dir: pycon-india-2018
+  youtube_list:
+    # True at 2019-03-28
+    - https://www.youtube.com/channel/UCqzv3lvF6fYxPRvSfWcJXdg/videos
+  related_urls:
+  - label: Conference schedule
+    url: https://in.pycon.org/2018/#schedule
+  language: eng
+  dates:
+    begin: 2018-10-05
+    end: 2018-10-07
+    default: 2018-10-05
+  issue: 767
+  minimal_download: true
+  tags:
+
+- title: Moscow Python Conf 2018
+  dir: moscow-python-conf-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PL47DhcO78AnGuYK7klOGA4O8yR6MloR5X
+  related_urls:
+  - label: Conference schedule
+    url: https://conf.python.ru/2018/schedule.html
+  language: rus
+  dates:
+    begin: 2018-10-22
+    end: 2018-10-23
+    default: 2018-10-22
+  issue: 778
+  minimal_download: true
+  tags:
+
+- title: PyCode Conference 2018
+  dir: pycode-conference-2018
+  youtube_list:
+    - https://www.youtube.com/channel/UC9MOXlsdsynLXiFvACxXQRg/videos
+  related_urls:
+  - label: Conference schedule
+    url: https://web.archive.org/web/20180801210316/https://pycode-conference.org/agenda.html
+  language:
+  dates:
+    begin: 2018-10-01
+    end: 2018-10-02
+    default: 2018-10-01
+  issue: 820
+  minimal_download: true
+  tags:
+
+- title: Python Sudeste 2018
+  dir: python-sudeste-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLgkr1FccVW8Sk1SOl4ynMKHsmLpqCsVmt
+  related_urls:
+  - label: Conference schedule
+    url: https://2018.pythonsudeste.org/#schedule
+  language: por
+  dates:
+    begin: 2018-03-30
+    end: 2018-04-01
+    default: 2018-03-30
+  issue: 823
+  minimal_download: true
+  tags:
+
+- title: PiterPy 2018
+  dir: piterpy-2018-eng
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLQTGSfnaYlCtiHQRO6ZCq1SetgkEsvm5Z
+  related_urls:
+  - label: Conference schedule
+    url: https://piterpy.com/en/events/11724/program
+  language: eng
+  dates:
+    begin: 2018-11-02
+    end: 2018-11-04
+    default: 2018-11-02
+  issue: 827
+  minimal_download: true
+  tags:
+
+- title: PiterPy 2018
+  dir: piterpy-2018
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLQTGSfnaYlCuonYGidCFg1aqii9a6cqL4
+  related_urls:
+  - label: Conference schedule
+    url: https://piterpy.com/ru/events/11724/program
+  language: rus
+  dates:
+    begin: 2018-11-02
+    end: 2018-11-04
+    default: 2018-11-02
+  issue: 827
+  minimal_download: true
+  tags:
+
 # == [ 2019 ] =================================================================
+
+- title: PyCon Belarus 2019
+  dir: pycon-belarus-2019
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLpVeA1tdgfCCBGmBw28JMq84gfEnneL2p
+  related_urls:
+  - label: Conference schedule
+    url: https://by.pycon.org/
+  language: eng
+  dates:
+    begin: 2019-02-15
+    end: 2019-02-16
+    default: 2019-02-15
+  issue: 754
+  minimal_download: true
+  tags:
+
+- title: PyCascades 2019
+  dir: pycascades-2019
+  youtube_list:
+    - https://www.youtube.com/watch?v=hAnCiTpxXPg
+    - https://www.youtube.com/watch?v=MTdYyCKcI8Q
+  related_urls:
+  - label: Conference schedule
+    url: https://2019.pycascades.com/schedule/
+  language: eng
+  dates:
+    begin: 2019-02-23
+    end: 2019-02-24
+    default: 2019-02-23
+  issue: 763
+  minimal_download: true
+  tags:
+
+- title: Pycon Odessa 2019
+  dir: pycon-odessa-2019
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLqq_7covfWiKumDIiomYN23-vrHzM5ayV
+  related_urls:
+  - label: Conference schedule
+    url: https://pyconodessa.com/en/#schedule
+  - label: Conference slides
+    url: https://www.slideshare.net/PyConOdessa/presentations
+  language: eng
+  dates:
+    begin: 2019-03-16
+    end: 2019-03-16
+    default: 2019-03-16
+  issue: 764
+  minimal_download: true
+  tags:
+
+- title: PyCon Philippines 2019
+  dir: pycon-ph-2019
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLCBCxsuKTqkCnc9lcO1PJKScJ4GFKZHwP
+  related_urls:
+  - label: Conference schedule
+    url: https://pycon.python.ph
+  language: eng
+  dates:
+    begin: 2019-02-23
+    end: 2019-02-24
+    default: 2019-02-23
+  issue: 765
+  minimal_download: true
+  tags:
+
+- title: PyCon SK 2019
+  dir: pycon-sk-2019
+  youtube_list:
+    - https://www.youtube.com/watch?v=6_5kE0phMvI
+    - https://www.youtube.com/watch?v=vu0iPnDqhik
+    - https://www.youtube.com/watch?v=1tJ7KSpw180
+    - https://www.youtube.com/watch?v=XSLuT3YCRMU
+  related_urls:
+  - label: Conference schedule
+    url: https://2019.pycon.sk/en/friday.html
+  language: eng
+  dates:
+    begin: 2019-03-22
+    end: 2019-03-24
+    default: 2019-03-22
+  issue: 766
+  minimal_download: true
+  tags:
+
+- title: DjangoCon Europe 2019
+  dir: djangocon-europe-2019
+  youtube_list:
+    - https://www.youtube.com/watch?v=oAV73PRRWNY
+    - https://www.youtube.com/watch?v=fql9m7iS5yA
+    - https://www.youtube.com/watch?v=hCdGKBiq1vU
+    - https://www.youtube.com/watch?v=gyvz4q09zto
+    - https://www.youtube.com/watch?v=k9ym9FYMKJ4
+    - https://www.youtube.com/watch?v=bc7a-oxAjGk
+  related_urls:
+  - label: Conference schedule
+    url: https://members.2019.djangocon.eu/conference/schedule/
+  language: eng
+  dates:
+    begin: 2019-04-10
+    end: 2019-04-14
+    default: 2019-04-10
+  issue: 782
+  minimal_download: true
+  tags:
+
+- title: PyCon Israel 2019
+  dir: pycon-israel-2019-06-04
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLnOlTVPC-yFxcJz_78_AAax1tOeIyF4mY
+    - https://www.youtube.com/playlist?list=PLnOlTVPC-yFzfWA6MnGOIhegBbgJB9ff2
+    - https://www.youtube.com/playlist?list=PLnOlTVPC-yFzkirEatRUlLlhQyg8zvnT5
+  related_urls:
+  - label: Conference schedule
+    url: https://pycon.org.il/2019/schedule/
+  language: # eng
+  dates:
+    begin: 2019-06-02
+    end: 2019-06-05
+    default: 2019-06-04
+  issue: 807
+  minimal_download: true
+  tags:
+
+- title: PyCon Israel 2019
+  dir: pycon-israel-2019-06-03
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLnOlTVPC-yFzCfdkO4R_-NTo20IQEBzqy
+    - https://www.youtube.com/playlist?list=PLnOlTVPC-yFxSs9Fw1ShmJvHw7Z3UcbCs
+    - https://www.youtube.com/playlist?list=PLnOlTVPC-yFy982ETpXCbkpm-9dVt3S4F
+  related_urls:
+  - label: Conference schedule
+    url: https://pycon.org.il/2019/schedule/
+  language: # eng
+  dates:
+    begin: 2019-06-02
+    end: 2019-06-05
+    default: 2019-06-03
+  issue: 807
+  minimal_download: true
+  tags:
+
+- title: PyCon Italia 2019
+  dir: pycon-italia-2019
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLFxkG856NgEGHQyfUSTjFiZ2zy2ryzlzg
+  related_urls:
+  - label: Conference schedule
+    url: https://www.pycon.it/p3/schedule/pycon10/
+  language: # ita
+  dates:
+    begin: 2019-05-02
+    end: 2019-05-05
+    default: 2019-05-03
+  issue: 806
+  minimal_download: true
+  tags:
+
+- title: PyCon CZ 2019
+  dir: pycon-cz-2019
+  youtube_list:
+    - https://www.youtube.com/watch?v=mniWotxI4C8
+    - https://www.youtube.com/watch?v=5JDtLnUbF6Q
+    - https://www.youtube.com/watch?v=P3X0n-a0_hI
+    - https://www.youtube.com/watch?v=3ci5jFykVxo
+  related_urls:
+  - label: Conference schedule
+    url: https://cz.pycon.org/2019/programme/schedule/
+  language:
+  dates:
+    begin: 2019-06-14
+    end: 2019-06-16
+    default: 2019-06-14
+  issue: 816
+  minimal_download: true
+  tags:
+    - live stream
+
+- title: GeoPython 2019
+  dir: geopython-2019
+  youtube_list:
+    - http://www.youtube.com//watch?v=CmoinmtzdVA
+    - http://www.youtube.com//watch?v=7ZPwtoKNaYU
+    - http://www.youtube.com//watch?v=NBBiC_0eVS0
+    - http://www.youtube.com//watch?v=3KRYObqpMlk
+    - http://www.youtube.com//watch?v=67C5jsmfE2s
+  related_urls:
+  - label: Conference schedule
+    url: https://submit.geopython.net/geopython2019/schedule/
+  language: eng
+  dates:
+    begin: 2019-06-25
+    end: 2019-06-26
+    default: 2019-06-26
+  issue: 818
+  minimal_download: true
+  tags:
+    - live stream
+
+- title: Moscow Python Conf 2019
+  dir: moscow-python-conf-2019
+  youtube_list:
+    # Not: - https://www.youtube.com/playlist?list=PL47DhcO78AnF-uZ2uQScGFs88EKkUUZje
+    - https://www.youtube.com/playlist?list=PL47DhcO78AnEKEgvnGrh0L471CRHcafAi
+  related_urls:
+  - label: Conference schedule
+    url: https://conf.python.ru/2019/schedule.html
+  language: rus
+  dates:
+    begin: 2019-04-05
+    end: 2019-04-05
+    default: 2019-04-05
+  issue: 779
+  minimal_download: true
+  tags:
+
+- title: EuroPython 2019
+  dir: europython-2019
+  youtube_list:
+    # youtube-dl https://www.youtube.com/user/PythonItalia/videos --ignore-errors --match-title 2019 --simulate --dump-single-json | jq '' | grep '"webpage_url":'
+    - https://www.youtube.com/watch?v=T6vC_LOHBJ4
+    - https://www.youtube.com/watch?v=ELI8WKiUmBY
+    - https://www.youtube.com/watch?v=WMTV2jdfUfA
+    - https://www.youtube.com/watch?v=C-Ltp1D_m3c
+    - https://www.youtube.com/watch?v=HdtBT3yXUeE
+    - https://www.youtube.com/watch?v=2hN7uTcaHLM
+    - https://www.youtube.com/watch?v=hgry3vkuI5Y
+    - https://www.youtube.com/watch?v=2FmMESSD2CM
+    - https://www.youtube.com/watch?v=lxXC76jHc98
+    - https://www.youtube.com/watch?v=icVMirr1Kis
+    - https://www.youtube.com/watch?v=jWKnA2ZdzHk
+    - https://www.youtube.com/watch?v=3Dsq_sPLc3g
+    - https://www.youtube.com/watch?v=-jqzStNk6CM
+    - https://www.youtube.com/watch?v=XDy_3oiAKsk
+    - https://www.youtube.com/watch?v=jnDfNJe-GlE
+    - https://www.youtube.com/watch?v=D6CHQNIox3s
+    - https://www.youtube.com/watch?v=Dz89wIwX_EE
+    - https://www.youtube.com/watch?v=SUQYuA9AJT0
+  related_urls:
+  - label: Conference schedule
+    url: https://ep2019.europython.eu/schedule/
+  language: eng
+  dates:
+    begin: 2019-07-08
+    end: 2019-07-14
+    default: 2019-07-10
+  issue: 830
+  minimal_download: true
+  tags:
+
+- title: SciPy 2019
+  dir: scipy-2019
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLYx7XA2nY5GcDQblpQ_M1V3PQPoLWiDAC
+  related_urls:
+  - label: Conference schedule
+    url: https://www.scipy2019.scipy.org/confschedule
+  language: eng
+  dates:
+    begin: 2019-07-08
+    end: 2019-07-14
+    default: 2019-07-10
+  issue: 832
+  minimal_download: true
+  tags:
+
+- title: PyCon AU 2019
+  dir: pycon-au-2019
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLs4CJRBY5F1LKqauI3V4E_xflt6Gow611
+  related_urls:
+  - label: Conference schedule
+    url: https://2019.pycon-au.org/schedule
+  language: eng
+  dates:
+    begin: 2019-08-02
+    end: 2019-08-06
+    default: 2019-08-02
+  issue: 843
+  minimal_download: true
+  tags:
+
 # == [ 2020 ] =================================================================
 
