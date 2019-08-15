@@ -4,48 +4,23 @@
 import copy
 import datetime
 import json
-import logging
 import os
 import pathlib
 import re
+import sys
 
 import sh
 import slugify
 import yaml
 import youtube_dl
-from colorlog import ColoredFormatter
 
-LOGGER = None
+from loguru import logger
+
 JSON_FORMAT_KWARGS = {
     'indent': 2,
     'separators': (',', ': '),
     'sort_keys': True,
 }
-
-
-def setup_logger() -> logging.Logger:
-    """Return a logger with a default ColoredFormatter."""
-    # From https://github.com/borntyping/python-colorlog/blob/master/doc/
-    #   example.py
-    formatter = ColoredFormatter(
-        "%(log_color)s%(levelname)-8s%(reset)s %(blue)s%(message)s",
-        datefmt=None,
-        reset=True,
-        log_colors={
-            'DEBUG': 'cyan',
-            'INFO': 'green',
-            'WARNING': 'yellow',
-            'ERROR': 'red',
-            'CRITICAL': 'red',
-        })
-
-    logger = logging.getLogger('pyvideo-scrape')
-    handler = logging.StreamHandler()
-    handler.setFormatter(formatter)
-    logger.addHandler(handler)
-    logger.setLevel(logging.DEBUG)
-
-    return logger
 
 
 def load_events(fich):
@@ -84,7 +59,7 @@ class Event:
             if mandatory_field in event_data and event_data[mandatory_field]:
                 pass
             else:
-                LOGGER.error('No %s data in conference %s', mandatory_field, self.title)
+                logger.error('No {} data in conference {}', mandatory_field, self.title)
                 raise ValueError("{} can't be null".format(mandatory_field))
         self.issue = event_data['issue']
 
@@ -117,14 +92,14 @@ class Event:
         os.chdir(str(self.repository_path))
         sh.git.checkout('master')
         sh.git.checkout('-b', self.branch)
-        LOGGER.debug('Branch %s created', self.branch)
+        logger.debug('Branch {} created', self.branch)
 
     def create_dirs(self):
         """Create new directories and conference file in pyvideo repository to add a new event"""
         for new_directory in [self.event_dir, self.event_dir / 'videos']:
             # assert not new_directory.exists() , 'Dir {} already exists'.format(str(new_directory))
             new_directory.mkdir(exist_ok=False)
-            LOGGER.debug('Dir %s created', new_directory)
+            logger.debug('Dir {} created', new_directory)
 
     def create_category(self):  # , conf_dir, title):
         """Create category.json for the conference"""
@@ -132,7 +107,7 @@ class Event:
         category_data = {'title': self.title, }
         category_data_text = json.dumps(category_data, **JSON_FORMAT_KWARGS) + '\n'
         save_file(category_file_path, category_data_text)
-        LOGGER.debug('File %s created', category_file_path)
+        logger.debug('File {} created', category_file_path)
 
     def download_video_data(self):
         """Download youtube metadata corresponding to this event youtube lists"""
@@ -151,7 +126,7 @@ class Event:
                     download=False  # No download needed, only the info
                 )
 
-            LOGGER.debug('Url scraped %s', url)
+            logger.debug('Url scraped {}', url)
             if 'entries' in result_ydl:
                 # It's a playlist or a list of videos
                 return result_ydl['entries']
@@ -164,7 +139,7 @@ class Event:
             if youtube_video_data:  # Valid video
                 self.videos.append(Video(video_data=youtube_video_data, event=self))
             else:
-                LOGGER.warning('Null youtube video')
+                logger.warning('Null youtube video')
 
     def save_video_data(self):
         """Save all event videos in PyVideo format"""
@@ -186,7 +161,7 @@ class Event:
             message = 'Scraped {}\n\nFixes #{}'.format(self.branch, self.issue)
             sh.git.commit('-m', message)
             sh.git.checkout('master')
-        LOGGER.debug('Conference %s commited', self.branch)
+        logger.debug('Conference {} commited', self.branch)
 
 
 class Video:
@@ -239,7 +214,6 @@ class Video:
             self.language = event.language
         self.related_urls = copy.deepcopy(event.related_urls)
 
-
         if event.minimal_download:
             self.speakers = []
             self.tags = event.tags
@@ -260,7 +234,7 @@ class Video:
             while new_path.exists():
                 duplicate_num += 1
                 new_path = path.parent / (path.stem + '-{}{}'.format(duplicate_num, path.suffix))
-                LOGGER.debug('Duplicate, renaming to %s', path)
+                logger.debug('Duplicate, renaming to {}', path)
             path = new_path
 
         data = {
@@ -281,18 +255,18 @@ class Video:
 
         data_text = json.dumps(data, **JSON_FORMAT_KWARGS) + '\n'
         save_file(path, data_text)
-        LOGGER.debug('File %s created', path)
+        logger.debug('File {} created', path)
 
 
+@logger.catch
 def main():
     """Scrape several conferences into pyvideo repository"""
 
-    global LOGGER
-    LOGGER = setup_logger()
+    logger.add(sys.stderr, format="{time} {level} {message}", filter="my_module", level="DEBUG")
 
     time_init = datetime.datetime.now()
-    LOGGER.debug('Time init: %s', time_init)
-    LOGGER.debug('youtube-dl version: %s ', youtube_dl_version())
+    logger.debug('Time init: {}', time_init)
+    logger.debug('youtube-dl version: {} ', youtube_dl_version())
 
     cwd = pathlib.Path.cwd()
 
@@ -307,8 +281,8 @@ def main():
             event.create_dirs()
             event.create_category()
         except (sh.ErrorReturnCode_128, FileExistsError) as exc:
-            LOGGER.warning('Event %s skipped', event.branch)
-            LOGGER.debug(exc.args[0])
+            logger.warning('Event {} skipped', event.branch)
+            logger.debug(exc.args[0])
             continue
         event.download_video_data()
         event.save_video_data()
@@ -316,9 +290,9 @@ def main():
 
     time_end = datetime.datetime.now()
     time_delta = str(time_end - time_init)
-    LOGGER.debug('Time init: %s', time_init)
-    LOGGER.debug('Time end: %s', time_end)
-    LOGGER.debug('Time delta: %s', time_delta)
+    logger.debug('Time init: {}', time_init)
+    logger.debug('Time end: {}', time_end)
+    logger.debug('Time delta: {}', time_delta)
     # TODO: mypy
 
 

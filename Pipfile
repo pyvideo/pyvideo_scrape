@@ -8,11 +8,11 @@ yapf = "*"
 ipdb = "*"
 
 [packages]
-colorlog = "*"
 pyaml = "*"
 sh = "*"
 youtube-dl = "*"
 python-slugify = "*"
+loguru = "*"
 
 [requires]
 python_version = "3.5"
