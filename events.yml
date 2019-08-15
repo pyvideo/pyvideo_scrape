@@ -11,7 +11,7 @@ events:
 # =============================================================================
 event_template:
 
-- title: PyConxxx2018
+- title: PyConxxx2019
   dir: pyconxxx
   youtube_list:
     - xxx
@@ -25,6 +25,22 @@ event_template:
     default: xxx
   issue: xxx
   minimal_download: true
+  overwrite:
+    # all: true # takes precedence over add_new_files and existing_files_fields
+    add_new_files: true
+    existing_files_fields:
+      - copyright_text
+      - duration
+      - thumbnail_url
+      - videos
+
+      - description
+      - language
+      - recorded
+      - related_urls
+      - speakers
+      - tags
+      - title
   tags:
 
 # ISO_639-3 language codes https://en.wikipedia.org/wiki/ISO_639-3

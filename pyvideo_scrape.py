@@ -48,6 +48,8 @@ class Event:
 
     def __init__(self, event_data: dict, repository_path):
         self.videos = []
+        self.youtube_videos = []
+        self.file_videos = []
         self.repository_path = repository_path
 
         self.branch = event_data['dir']
@@ -90,6 +92,20 @@ class Event:
         if self.minimal_download:
             self.branch = "{}--minimal-download".format(self.branch)
 
+        self.overwrite, self.add_new_files, self.wipe = False, False, False
+        self.overwrite_fields = []
+        if 'overwrite' in event_data and event_data['overwrite']:
+            overwrite = event_data['overwrite']
+            self.overwrite = True
+            if 'all' in overwrite and overwrite['all']:
+                self.wipe = True
+            else:
+                if 'add_new_files' in overwrite and overwrite['add_new_files']:
+                    self.add_new_files = True
+                if ('existing_files_fields' in overwrite
+                        and overwrite['existing_files_fields']):
+                    self.overwrite_fields = overwrite['existing_files_fields']
+
     def create_branch(self):
         """Create a new branch in pyvideo repository to add a new event"""
         os.chdir(str(self.repository_path))
@@ -98,10 +114,10 @@ class Event:
         logger.debug('Branch {} created', self.branch)
 
     def create_dirs(self):
-        """Create new directories and conference file in pyvideo repository to add a new event"""
+        """Create new directories and conference file in pyvideo repository to
+            add a new event"""
         for new_directory in [self.event_dir, self.event_dir / 'videos']:
-            # assert not new_directory.exists() , 'Dir {} already exists'.format(str(new_directory))
-            new_directory.mkdir(exist_ok=False)
+            new_directory.mkdir(exist_ok=self.overwrite)
             logger.debug('Dir {} created', new_directory)
 
     def create_category(self):  # , conf_dir, title):
@@ -116,7 +132,8 @@ class Event:
         logger.debug('File {} created', category_file_path)
 
     def download_video_data(self):
-        """Download youtube metadata corresponding to this event youtube lists"""
+        """Download youtube metadata corresponding to this event youtube
+            lists"""
 
         def scrape_url(url):
             """Scrape the video list, youtube_dl does all the heavy lifting"""
@@ -136,20 +153,63 @@ class Event:
             if 'entries' in result_ydl:
                 # It's a playlist or a list of videos
                 return result_ydl['entries']
-            else:
-                # Just a video
-                return [result_ydl]
+            # Just a video
+            return [result_ydl]
 
         youtube_list = sum((scrape_url(url) for url in self.youtube_lists), [])
         for youtube_video_data in youtube_list:
             if youtube_video_data:  # Valid video
-                self.videos.append(
-                    Video(video_data=youtube_video_data, event=self))
+                self.youtube_videos.append(
+                    Video.from_youtube(
+                        video_data=youtube_video_data, event=self))
             else:
                 logger.warning('Null youtube video')
 
+    def load_video_data(self):
+        """Load video data form existing event video files"""
+        self.file_videos = [
+            Video.from_file(path, self)
+            for path in self.video_dir.glob('*.json')
+        ]
+
+    def merge_video_data(self):
+        """Merge old video data when configured so"""
+        if self.overwrite:
+            if self.wipe:
+                self.videos = self.youtube_videos
+            elif self.add_new_files or self.overwrite_fields:
+                old_videos = {
+                    video.filename: video
+                    for video in self.file_videos
+                }
+                new_videos = {
+                    video.filename: video
+                    for video in self.youtube_videos
+                }
+
+                if self.overwrite_fields:
+                    stay = set(old_videos) - set(new_videos)
+                    self.videos.extend([new_videos[path] for path in stay])
+
+                    changes = set(new_videos).intersection(set(old_videos))
+                    for path in changes:
+                        merged_video = old_videos[path].merge(
+                            new_videos[path], self.overwrite_fields)
+                        self.videos.append(merged_video)
+                else:
+                    self.videos = self.file_videos
+                if self.add_new_files:
+                    adds = set(new_videos) - set(old_videos)
+                    self.videos.extend([new_videos[path] for path in adds])
+        else:  # not self.overwrite
+            self.videos = self.youtube_videos
+
     def save_video_data(self):
         """Save all event videos in PyVideo format"""
+        if self.overwrite:
+            # Erase old event videos
+            for path in self.video_dir.glob('*.json'):
+                path.unlink()
         for video in self.videos:
             video.save()
 
@@ -159,8 +219,9 @@ class Event:
         sh.git.checkout(self.branch)
         sh.git.add(self.event_dir)
         if self.minimal_download:
-            message = 'Minimal download: {}\n\nminimal download executed for #{}'.format(
-                self.title, self.issue)
+            message = ('Minimal download: '
+                       '{}\n\nminimal download executed for #{}'.format(
+                           self.title, self.issue))
             sh.git.commit('-m', message)
             sh.git.push('--set-upstream', 'origin', self.branch)
             # ~ sh.git.push('--set-upstream', '--force', 'origin', self.branch)
@@ -190,7 +251,7 @@ class Video:
     def __calculate_slug(self):
         """Calculate slug from title"""
 
-        return slugify.slugify(self.title)
+        return slugify.slugify(self.metadata['title'])
 
     def __calculate_date_recorded(self, upload_date_str):
         """Calculate record date from youtube field and event dates"""
@@ -205,41 +266,84 @@ class Video:
 
         return upload_date.isoformat()
 
-    def __init__(self, video_data, event):
+    def __init__(self, event):
         self.event = event
+        self.filename = None
+        self.metadata = {}
 
-        self.title = self.__calculate_title(video_data)
+    @classmethod
+    def from_file(cls, path, event):
+        """Contructor. Retrieves video metadata from file"""
+        self = cls(event)
+
+        self.filename = path.stem  # Name without .json
+
+        try:
+            with path.open() as f_path:
+                self.metadata = json.load(f_path)
+        except ValueError:
+            print('Json syntax error in file {}'.format(path))
+            raise
+
+        return self
+
+    @classmethod
+    def from_youtube(cls, video_data, event):
+        """Contructor. Retrieves video metadata with youtube-dl"""
+        self = cls(event)
+
+        metadata = self.metadata
+
+        metadata['title'] = self.__calculate_title(video_data)
         self.filename = self.__calculate_slug()
-        self.speakers = ['TODO']  # Needs human intervention later
+        metadata['speakers'] = ['TODO']  # Needs human intervention later
         # youtube_id = video_data['display_id']
-        # self.thumbnail_url = 'https://i.ytimg.com/vi/{}/maxresdefault.jpg'.format(youtube_id)
-        self.thumbnail_url = video_data['thumbnail']
-        self.videos = [{'type': 'youtube', 'url': video_data['webpage_url']}]
-        self.recorded = self.__calculate_date_recorded(
+        # metadata['thumbnail_url'] =
+        #   'https://i.ytimg.com/vi/{}/maxresdefault.jpg'.format(youtube_id)
+        metadata['thumbnail_url'] = video_data['thumbnail']
+        metadata['videos'] = [{
+            'type': 'youtube',
+            'url': video_data['webpage_url']
+        }]
+        metadata['recorded'] = self.__calculate_date_recorded(
             video_data['upload_date'])
 
         # optional values
-        self.copyright_text = video_data['license']
-        self.duration = video_data['duration']  # In seconds
-        self.language = video_data['formats'][0].get('language',
-                                                     event.language)
-        if not self.language:
-            self.language = event.language
-        self.related_urls = copy.deepcopy(event.related_urls)
+        metadata['copyright_text'] = video_data['license']
+        metadata['duration'] = video_data['duration']  # In seconds
+        metadata['language'] = video_data['formats'][0].get(
+            'language', event.language)
+        if not metadata['language']:
+            metadata['language'] = event.language
+        metadata['related_urls'] = copy.deepcopy(event.related_urls)
 
         if event.minimal_download:
-            self.speakers = []
-            self.tags = event.tags
-            self.description = ''
+            metadata['speakers'] = []
+            metadata['tags'] = event.tags
+            metadata['description'] = ''
         else:
-            self.tags = sorted(set(video_data['tags']).union(set(event.tags)))
-            self.description = video_data['description']
+            metadata['tags'] = sorted(
+                set(video_data['tags']).union(set(event.tags)))
+            metadata['description'] = video_data['description']
             description_urls = list(
                 set(
                     re.findall(r'http[s]?://[^ \\\n\t()[\]"`´\']+', video_data[
                         'description'])))
             for url in description_urls:
-                self.related_urls.append({'label': url, 'url': url})
+                metadata['related_urls'].append({'label': url, 'url': url})
+
+        return self
+
+    def merge(self, new_video, fields):
+        """Create video copy overwriting fields """
+        merged_video = Video(self.event)
+        merged_video.filename =  self.filename
+        for field in self.metadata:
+            if field in set(fields):
+                merged_video.metadata[field] = new_video.metadata.get(field)
+            else:
+                merged_video.metadata[field] = self.metadata.get(field)
+        return merged_video
 
     def save(self):
         """"Save to disk"""
@@ -254,23 +358,7 @@ class Video:
                 logger.debug('Duplicate, renaming to {}', path)
             path = new_path
 
-        data = {
-            'title': self.title,
-            'speakers': self.speakers,
-            'thumbnail_url': self.thumbnail_url,
-            'videos': self.videos,
-            'recorded': self.recorded,
-            'copyright_text': self.copyright_text,
-            'duration': self.duration,
-            'language': self.language,
-            'related_urls': self.related_urls,
-        }
-        if 'tags' in self.__dict__:
-            data['tags'] = self.tags
-        if 'description' in self.__dict__:
-            data['description'] = self.description
-
-        data_text = json.dumps(data, **JSON_FORMAT_KWARGS) + '\n'
+        data_text = json.dumps(self.metadata, **JSON_FORMAT_KWARGS) + '\n'
         save_file(path, data_text)
         logger.debug('File {} created', path)
 
@@ -310,6 +398,8 @@ def main():
             logger.debug(exc.args[0])
             continue
         event.download_video_data()
+        event.load_video_data()
+        event.merge_video_data()
         event.save_video_data()
         event.create_commit()
 
@@ -318,7 +408,6 @@ def main():
     logger.debug('Time init: {}', time_init)
     logger.debug('Time end: {}', time_end)
     logger.debug('Time delta: {}', time_delta)
-    # TODO: mypy
 
 
 if __name__ == '__main__':

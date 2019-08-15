@@ -5,7 +5,8 @@ verify_ssl = true
 
 [dev-packages]
 yapf = "*"
-ipdb = "*"
+mypy = "*"
+pudb = "*"
 
 [packages]
 pyaml = "*"

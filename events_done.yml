@@ -4,6 +4,34 @@
 
 done_events:
 
+# == [ 2016 ] =================================================================
+
+- title: Python Brasil 2016
+  dir: pythonbrasil-2016
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLDC3uVLxaEQ2QPRucgMwiK22QSgq0aIEJ
+  related_urls:
+  - label: Conference schedule
+    url: http://2016.pythonbrasil.org.br/#schedule
+  language: por
+  dates:
+    begin: 2016-10-13
+    end: 2016-10-15
+    default: 2016-10-13
+  issue: 270
+  minimal_download: false
+  overwrite:
+    # all: true # takes precedence over add_new_files and existing_files_fields
+    add_new_files: true
+    existing_files_fields:
+      - copyright_text
+      - duration
+      - thumbnail_url
+      - videos
+  tags:
+
+# == [ 2018 ] =================================================================
+
 - title: PyData Amsterdam 2018
   dir: pydata-amsterdam-2018
   youtube_list: https://www.youtube.com/playlist?list=PLGVZCDnMOq0rAn6c8OIbPdw1xebhhyoHN
@@ -136,3 +164,56 @@ done_events:
   minimal_download: false
   tags:
 
+# == [ 2019 ] =================================================================
+
+- title: PyCon US 2019
+  dir: pycon-us-2019
+  youtube_list:
+  - https://www.youtube.com/channel/UCxs2IIVXaEHHA4BtTiWZ2mQ
+  related_urls:
+  - label: Conference schedule
+    url: https://us.pycon.org/2019/schedule/talks/
+  language: eng
+  dates:
+    begin: 2019-05-01
+    end: 2019-05-09
+    default: 2019-05-03
+  issue: 785
+  minimal_download: false
+  overwrite:
+    # all: true # takes precedence over add_new_files and existing_files_fields
+    add_new_files: true
+  tags:
+
+- title: PyCon AU 2019
+  dir: pycon-au-2019
+  youtube_list:
+    - https://www.youtube.com/playlist?list=PLs4CJRBY5F1LKqauI3V4E_xflt6Gow611
+  related_urls:
+  - label: Conference schedule
+    url: https://2019.pycon-au.org/schedule
+  language: eng
+  dates:
+    begin: 2019-08-02
+    end: 2019-08-06
+    default: 2019-08-02
+  issue: 843
+  tags:
+  minimal_download: false
+  overwrite:
+    # all: true # takes precedence over add_new_files and existing_files_fields
+    add_new_files: true
+    existing_files_fields:
+      - copyright_text
+      - duration
+      - thumbnail_url
+      - videos
+      - description
+      - language
+      # ~ - recorded
+      - related_urls
+      # ~ - speakers
+      # ~ - tags
+      #- title
+
+# == [ 2020 ] =================================================================
