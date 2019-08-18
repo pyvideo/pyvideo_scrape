@@ -79,13 +79,13 @@ issue | Github issue solved scraping this videos
 minimal_download | Download only the fields that don't need human intervention, intended for a first download that exposes the minimal data.
 tags | Tags common to all events in video
 overwrite | Section needed to add new content to existing event
-overwrite: all | Removes event content and downloads present videos metadata (takes precedence over add_new_files and existing_files_fields)
-overwrite: add_new_files | Downloads new videos metadata (compatible with existing_files_fields)
-overwrite: existing_files_fields | Updates selected fields for existing videos (compatible with add_new_files)
+overwrite.all | Removes event content and downloads present videos metadata (takes precedence over add_new_files and existing_files_fields)
+overwrite.add_new_files | Downloads new videos metadata (compatible with existing_files_fields)
+overwrite.existing_files_fields | Updates selected fields for existing videos (compatible with add_new_files)
 
 The files `events_minimal_download.yml` and `events_done.yml` are manually saved to ease future data reload (especially minimal_download file).
 
-## use cases
+## Use cases
 
 ### New conference and little time available
 
