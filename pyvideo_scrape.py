@@ -182,14 +182,26 @@ class Event:
                     video.filename: video
                     for video in self.file_videos
                 }
-                new_videos = {
-                    video.filename: video
-                    for video in self.youtube_videos
+                old_videos_url = {
+                    video.metadata['videos'][0]['url']: video
+                    for video in self.file_videos
                 }
+                new_videos = {}
+                for video in self.youtube_videos:
+                    new_video_url = video.metadata['videos'][0]['url']
+                    if new_video_url in old_videos_url:
+                        new_video_filename = old_videos_url[new_video_url].filename
+                    else:
+                        new_video_filename = video.filename
+                    new_videos[new_video_filename] = video
 
                 if self.overwrite_fields:
-                    stay = set(old_videos) - set(new_videos)
-                    self.videos.extend([new_videos[path] for path in stay])
+                    forgotten = set(old_videos) - set(new_videos)
+                    for name in forgotten:
+                        logger.warning('Missing video: {} {}',
+                            old_videos[name].filename,
+                            old_videos[name].metadata['videos'][0]['url'],
+                            )
 
                     changes = set(new_videos).intersection(set(old_videos))
                     for path in changes:
@@ -337,7 +349,7 @@ class Video:
     def merge(self, new_video, fields):
         """Create video copy overwriting fields """
         merged_video = Video(self.event)
-        merged_video.filename =  self.filename
+        merged_video.filename = self.filename
         for field in self.metadata:
             if field in set(fields):
                 merged_video.metadata[field] = new_video.metadata.get(field)
