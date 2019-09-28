@@ -4,8 +4,8 @@
 
 PyVideo Scrape gets python conference videos (youtube lists) metadata and puts it into a PyVideo repository branch.
 
-Why another PyVideo scraper?
-It was my initial attempt to get data from youtube lists, worked for me. Now I cleaned it a bit and uploaded to a repo.
+Why another PyVideo scraper?  
+It was my initial attempt to get data from youtube lists, worked for me. Then I cleaned it a bit and uploaded to a repo.
 
 # Installation
 
@@ -106,7 +106,7 @@ Old content will be erased (only automated work) and created again witth present
 
 ### Have time to download/review a conference
 
-#### No exiting content
+#### No existing content
 
 Use `minimal_download: false`
 
