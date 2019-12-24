@@ -232,14 +232,19 @@ class Event:
         sh.git.add(self.event_dir)
         if self.minimal_download:
             message = ('Minimal download: '
-                       '{}\n\nminimal download executed for #{}'.format(
-                           self.title, self.issue))
+                       + '{}\n\nMinimal download executed for #{}'.format(
+                          self.title, self.issue)
+                       + '\nScraped with [pyvideo_scrape]'
+                       + '(https://github.com/pyvideo/pyvideo_scrape)')
             sh.git.commit('-m', message)
             sh.git.push('--set-upstream', 'origin', self.branch)
             # ~ sh.git.push('--set-upstream', '--force', 'origin', self.branch)
             sh.git.checkout('master')
         else:
-            message = 'Scraped {}\n\nFixes #{}'.format(self.branch, self.issue)
+            message = (
+                'Scraped {}\n\nFixes #{}'.format(self.branch, self.issue)
+                + '\nScraped with [pyvideo_scrape]'
+                + '(https://github.com/pyvideo/pyvideo_scrape)')
             sh.git.commit('-m', message)
             sh.git.checkout('master')
         logger.debug('Conference {} commited', self.branch)
