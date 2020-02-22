@@ -17,6 +17,7 @@ import youtube_dl
 from loguru import logger
 
 JSON_FORMAT_KWARGS = {
+    'ensure_ascii': False,
     'indent': 2,
     'separators': (',', ': '),
     'sort_keys': True,
