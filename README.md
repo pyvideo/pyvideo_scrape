@@ -4,7 +4,7 @@
 
 PyVideo Scrape gets python conference videos (youtube lists) metadata and puts it into a PyVideo repository branch.
 
-Why another PyVideo scraper?  
+Why another PyVideo scraper?
 It was my initial attempt to get data from youtube lists, worked for me. Then I cleaned it a bit and uploaded to a repo.
 
 # Installation
@@ -89,7 +89,7 @@ The files `events_minimal_download.yml` and `events_done.yml` are manually saved
 
 ### New conference and little time available
 
-Use `minimal_download: true`, download and pull request. If no more changes are added no review is needed and it's easier to publish.
+Use `minimal_download: true`, download and pull request. If no more changes are added no review is needed and it's easier to publish and you can overwrite it later.
 
 ### New content in a "minimal_download" conference
 
@@ -150,3 +150,12 @@ You have to download possible new files and update the rest of the fields, using
       - language
       - related_urls
 ~~~
+
+## After scraping
+
+The files produced by the scraping need some cleaning (You could use [pyvideo_lektor](https://github.com/pyvideo/pyvideo_lektor) for it):
+
+* Fill the missing `speaker` value (as to do task the field have "TODO" in it, to be easy to `grep`).
+* Clean each field to contain only what the field name says. See [Data Completeness](https://github.com/pyvideo/data/blob/master/CONTRIBUTING.rst#data-completeness) in the [contributing guide](https://github.com/pyvideo/data/blob/master/CONTRIBUTING.rst)
+
+

@@ -57,6 +57,7 @@ class Event:
         self.video_dir = self.event_dir / 'videos'
 
         self.title = event_data['title']
+
         for mandatory_field in ['title', 'dir', 'issue', 'youtube_list']:
             if mandatory_field in event_data and event_data[mandatory_field]:
                 pass
@@ -230,12 +231,19 @@ class Event:
         os.chdir(str(self.repository_path))
         sh.git.checkout(self.branch)
         sh.git.add(self.event_dir)
+        message_body = (
+            '\n\nEvent config:\n~~~yaml\n{}\n~~~\n'.format(self.event_data_yaml)
+            + '\nScraped with [pyvideo_scrape]'
+            + '(https://github.com/pyvideo/pyvideo_scrape)')
         if self.minimal_download:
             message = ('Minimal download: '
                        + '{}\n\nMinimal download executed for #{}'.format(
                           self.title, self.issue)
-                       + '\nScraped with [pyvideo_scrape]'
-                       + '(https://github.com/pyvideo/pyvideo_scrape)')
+                       + '\n\nOnly data that needs [no review](https://'
+                       + 'github.com/pyvideo/pyvideo_scrape#use-cases) was scraped.'
+                       + '\nThis event needs further scraping and human '
+                       + 'reviewing for the description and other data to show.'
+                       + message_body)
             sh.git.commit('-m', message)
             sh.git.push('--set-upstream', 'origin', self.branch)
             # ~ sh.git.push('--set-upstream', '--force', 'origin', self.branch)
@@ -243,8 +251,7 @@ class Event:
         else:
             message = (
                 'Scraped {}\n\nFixes #{}'.format(self.branch, self.issue)
-                + '\nScraped with [pyvideo_scrape]'
-                + '(https://github.com/pyvideo/pyvideo_scrape)')
+                + message_body)
             sh.git.commit('-m', message)
             sh.git.checkout('master')
         logger.debug('Conference {} commited', self.branch)
