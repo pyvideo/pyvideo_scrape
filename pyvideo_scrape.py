@@ -26,8 +26,9 @@ JSON_FORMAT_KWARGS = {
 def load_events(fich):
     """Loads events data yaml file"""
     with fich.open() as fd_conf:
-        conf = yaml.safe_load(fd_conf)
-    return conf
+        yaml_text = fd_conf.read()
+    conf = yaml.safe_load(yaml_text)
+    return yaml_text, conf
 
 
 def save_file(path, text):
@@ -226,13 +227,13 @@ class Event:
         for video in self.videos:
             video.save()
 
-    def create_commit(self):
+    def create_commit(self, event_data_yaml):
         """Create a new commit in pyvideo repository with the new event data"""
         os.chdir(str(self.repository_path))
         sh.git.checkout(self.branch)
         sh.git.add(self.event_dir)
         message_body = (
-            '\n\nEvent config:\n~~~yaml\n{}\n~~~\n'.format(self.event_data_yaml)
+            '\n\nEvent config:\n~~~yaml\n{}\n~~~\n'.format(event_data_yaml)
             + '\nScraped with [pyvideo_scrape]'
             + '(https://github.com/pyvideo/pyvideo_scrape)')
         if self.minimal_download:
@@ -404,7 +405,7 @@ def main():
     cwd = pathlib.Path.cwd()
 
     events_file = cwd / 'events.yml'
-    events_data = load_events(events_file)
+    event_data_yaml, events_data = load_events(events_file)
 
     pyvideo_repo = pathlib.PosixPath(
         events_data['repo_dir']).expanduser().resolve()
@@ -425,7 +426,7 @@ def main():
         event.load_video_data()
         event.merge_video_data()
         event.save_video_data()
-        event.create_commit()
+        event.create_commit(event_data_yaml)
 
     time_end = datetime.datetime.now()
     time_delta = str(time_end - time_init)
