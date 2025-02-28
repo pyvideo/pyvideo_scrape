@@ -4,15 +4,14 @@
 import copy
 import datetime
 import json
-import os
 import pathlib
 import re
 import sys
 
-import sh
+from git import Repo, GitCommandError
 import slugify
 import yaml
-import youtube_dl
+import yt_dlp as youtube_dl
 
 from loguru import logger
 
@@ -110,9 +109,10 @@ class Event:
 
     def create_branch(self):
         """Create a new branch in pyvideo repository to add a new event"""
-        os.chdir(str(self.repository_path))
-        sh.git.checkout('master')
-        sh.git.checkout('-b', self.branch)
+        repo = Repo(str(self.repository_path))
+        repo.git.checkout('main')
+        new_branch = repo.create_head(self.branch)
+        new_branch.checkout()
         logger.debug('Branch {} created', self.branch)
 
     def create_dirs(self):
@@ -229,9 +229,9 @@ class Event:
 
     def create_commit(self, event_data_yaml):
         """Create a new commit in pyvideo repository with the new event data"""
-        os.chdir(str(self.repository_path))
-        sh.git.checkout(self.branch)
-        sh.git.add(self.event_dir)
+        repo = Repo(str(self.repository_path))
+        repo.git.checkout(self.branch)
+        repo.git.add(self.event_dir)
         message_body = (
             '\n\nEvent config:\n~~~yaml\n{}\n~~~\n'.format(event_data_yaml)
             + '\nScraped with [pyvideo_scrape]'
@@ -245,16 +245,15 @@ class Event:
                        + '\nThis event needs further scraping and human '
                        + 'reviewing for the description and other data to show.'
                        + message_body)
-            sh.git.commit('-m', message)
-            sh.git.push('--set-upstream', 'origin', self.branch)
-            # ~ sh.git.push('--set-upstream', '--force', 'origin', self.branch)
-            sh.git.checkout('master')
+            repo.git.commit('-m', message)
+            repo.git.push('--set-upstream', 'origin', self.branch)
         else:
             message = (
                 'Scraped {}\n\nFixes #{}'.format(self.branch, self.issue)
                 + message_body)
-            sh.git.commit('-m', message)
-            sh.git.checkout('master')
+            repo.git.commit('-m', message)
+        
+        repo.git.checkout('main')
         logger.debug('Conference {} commited', self.branch)
 
 
@@ -334,7 +333,7 @@ class Video:
             video_data['upload_date'])
 
         # optional values
-        metadata['copyright_text'] = video_data['license']
+        # metadata['copyright_text'] = video_data['license']
         metadata['duration'] = video_data['duration']  # In seconds
         metadata['language'] = video_data['formats'][0].get(
             'language', event.language)
@@ -407,7 +406,7 @@ def main():
     events_file = cwd / 'events.yml'
     event_data_yaml, events_data = load_events(events_file)
 
-    pyvideo_repo = pathlib.PosixPath(
+    pyvideo_repo = pathlib.Path(
         events_data['repo_dir']).expanduser().resolve()
     events = [
         Event(event_data, repository_path=pyvideo_repo)
@@ -418,7 +417,7 @@ def main():
             event.create_branch()
             event.create_dirs()
             event.create_category()
-        except (sh.ErrorReturnCode_128, FileExistsError) as exc:
+        except (GitCommandError, FileExistsError) as exc:
             logger.warning('Event {} skipped', event.branch)
             logger.debug(exc.args[0])
             continue
