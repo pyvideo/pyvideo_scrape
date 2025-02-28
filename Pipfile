@@ -5,10 +5,10 @@ verify_ssl = true
 
 [packages]
 pyaml = "==25.1.0"
-sh = "==2.2.2"
-youtube-dl = "==2021.12.17"
 python-slugify = "==8.0.4"
 loguru = "==0.7.3"
+gitpython = "==3.1.44"
+yt-dlp = "==2025.2.19"
 
 [dev-packages]
 yapf = "==0.43.0"

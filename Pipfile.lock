@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "2fe98c2f999ba5eebefcbf1b2673aa53b7062df62697add7aeab430c9290e065"
+            "sha256": "48252f444d7e56739951ed27a096b54c0b6a93efdedbc0121566a7351a7e7566"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -23,6 +23,23 @@
             ],
             "markers": "sys_platform == 'win32'",
             "version": "==0.4.6"
+        },
+        "gitdb": {
+            "hashes": [
+                "sha256:5ef71f855d191a3326fcfbc0d5da835f26b13fbcba60c32c21091c349ffdb571",
+                "sha256:67073e15955400952c6565cc3e707c554a4eea2e428946f7a4c162fab9bd9bcf"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==4.0.12"
+        },
+        "gitpython": {
+            "hashes": [
+                "sha256:9e0e10cda9bed1ee64bc9a6de50e7e38a9c9943241cd7f585f6df3ed28011110",
+                "sha256:c87e30b26253bf5418b01b0660f818967f3c503193838337fe5e573331249269"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.7'",
+            "version": "==3.1.44"
         },
         "loguru": {
             "hashes": [
@@ -110,14 +127,13 @@
             "markers": "python_version >= '3.8'",
             "version": "==6.0.2"
         },
-        "sh": {
+        "smmap": {
             "hashes": [
-                "sha256:653227a7c41a284ec5302173fbc044ee817c7bad5e6e4d8d55741b9aeb9eb65b",
-                "sha256:e0b15b4ae8ffcd399bc8ffddcbd770a43c7a70a24b16773fbb34c001ad5d52af"
+                "sha256:26ea65a03958fa0c8a1c7e8c7a58fdc77221b8910f6be2131affade476898ad5",
+                "sha256:b30115f0def7d7531d22a0fb6502488d879e75b260a9db4d0819cfb25403af5e"
             ],
-            "index": "pypi",
-            "markers": "python_version < '4.0' and python_full_version >= '3.8.1'",
-            "version": "==2.2.2"
+            "markers": "python_version >= '3.7'",
+            "version": "==5.0.2"
         },
         "text-unidecode": {
             "hashes": [
@@ -134,13 +150,14 @@
             "markers": "sys_platform == 'win32'",
             "version": "==1.2.0"
         },
-        "youtube-dl": {
+        "yt-dlp": {
             "hashes": [
-                "sha256:bc59e86c5d15d887ac590454511f08ce2c47698d5a82c27bfe27b5d814bbaed2",
-                "sha256:f1336d5de68647e0364a47b3c0712578e59ec76f02048ff5c50ef1c69d79cd55"
+                "sha256:3ed218eaeece55e9d715afd41abc450dc406ee63bf79355169dfde312d38fdb8",
+                "sha256:f33ca76df2e4db31880f2fe408d44f5058d9f135015b13e50610dfbe78245bea"
             ],
             "index": "pypi",
-            "version": "==2021.12.17"
+            "markers": "python_version >= '3.9'",
+            "version": "==2025.2.19"
         }
     },
     "develop": {
