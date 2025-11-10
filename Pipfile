@@ -3,17 +3,20 @@ url = "https://pypi.org/simple"
 name = "pypi"
 verify_ssl = true
 
-[dev-packages]
-yapf = "*"
-mypy = "*"
-pudb = "*"
-
 [packages]
-pyaml = "*"
-sh = "*"
-youtube-dl = "*"
-python-slugify = "*"
-loguru = "*"
+pyaml = "==25.5.0"
+python-slugify = "==8.0.4"
+loguru = "==0.7.3"
+gitpython = "==3.1.44"
+yt-dlp = "==2025.05.22"
+
+[dev-packages]
+yapf = "==0.43.0"
+mypy = "==1.16.0"
+pudb = "==2025.1"
 
 [requires]
-python_version = "3.5"
+python_version = "3.11"
+
+[scripts]
+scrape = "python pyvideo_scrape.py"
